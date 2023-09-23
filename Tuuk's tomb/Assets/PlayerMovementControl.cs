@@ -7,21 +7,32 @@ public class PlayerMovementControl : MonoBehaviour
     
     public CharacterController2D controller;
     
-    // Start is called before the first frame update
+    public VectorValue playerStartPosition;
+    float runSpeed = 40f;
+    float horizontalMove = 0f;
+    bool jump = false;
+    bool crouch = false;
+
     void Start()
     {
-        
-    }
-
+        //set player position
+        transform.position = PlayerPrefs.HasKey("x") ? new Vector2(PlayerPrefs.GetFloat("x"), PlayerPrefs.GetFloat("y")) : playerStartPosition.initialValue;}
     // Update is called once per frame
     void Update()
     {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        
+        if( Input.GetButtonDown("Jump") )
+        {
+            jump = true;
+        }
         
     }
     
-    public void onMoveForward()
+    void FixedUpdate()
     {
-        controller.Move(1f, false, false);
-        
+        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        jump = false;
     }
+    
 }

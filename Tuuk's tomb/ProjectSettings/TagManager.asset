@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 3046289783
+    locked: 0
+  - name: ColiderTile
+    uniqueID: 3166061149
     locked: 0
   - name: Default
     uniqueID: 0
