@@ -57,7 +57,7 @@ public class CharacterController2D : MonoBehaviour
 	}
 	
 
-	public void Move(float moveX, float moveY, bool crouch, bool jump, bool isRunning)
+	public void Move(float moveX, float moveY, bool crouch, bool jump, bool isRunning, bool isSideView	)
 	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -103,7 +103,15 @@ public class CharacterController2D : MonoBehaviour
 
 			// Move the character by finding the target velocity
 			var currentSpeed = isRunning ? 7f : 5f;
-			Vector3 targetVelocity = new Vector2(moveX * currentSpeed, moveY * currentSpeed);//for no y movement: m_Rigidbody2D.velocity.y);
+			
+			Vector3 targetVelocity;
+			
+			if(isSideView)
+				targetVelocity = new Vector2(moveX * currentSpeed, m_Rigidbody2D.velocity.y);
+			else
+				targetVelocity = new Vector2(moveX * currentSpeed, moveY * currentSpeed);
+			
+			
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 

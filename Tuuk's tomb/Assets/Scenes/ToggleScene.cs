@@ -6,20 +6,34 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ToggleScene : MonoBehaviour
 {
-    public VectorValue playerStorage;
     public GameObject player;
-
-    private void Start()
+    private void ToggleSceneFunction()
     {
-        playerStorage.initialValue = player.transform.position;
-    }
-
-    public void ToggleSceneFunction()
-    {
-        PlayerPrefs.SetFloat("x", player.transform.position.x);
-        PlayerPrefs.SetFloat("y", player.transform.position.y);
+        var playerPosition = player.transform.position;
+        PlayerPrefs.SetFloat("x", playerPosition.x);
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name == "Sideview1.2" ? "TopDown1" : "Sideview1.2");
+        if(SceneManager.GetActiveScene().name == "TopDown1")
+        {
+            PlayerPrefs.SetFloat("z", playerPosition.y);
+            
+            switch (playerPosition.y)
+            {
+                //in case player y is inbeween 10 and 0 go to scene 1.1 
+                case < 10 and > 0:
+                    SceneManager.LoadScene("Sideview1.1");
+                    break;
+                
+                //in case player y is inbeween 0 and -10 go to scene 1.2
+                case > -10 and < 0:
+                    SceneManager.LoadScene("Sideview1.2");
+                    break;
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("y", player.transform.position.y);
+            SceneManager.LoadScene("TopDown1");
+        }
     }
     
 
