@@ -57,7 +57,7 @@ public class CharacterController2D : MonoBehaviour
 	}
 	
 
-	public void Move(float moveX, float moveY, bool crouch, bool jump)
+	public void Move(float moveX, float moveY, bool crouch, bool jump, bool isRunning)
 	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -102,30 +102,28 @@ public class CharacterController2D : MonoBehaviour
 			}
 
 			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(moveX * 10f, moveY * 10f);//for no y movement: m_Rigidbody2D.velocity.y);
+			var currentSpeed = isRunning ? 7f : 5f;
+			Vector3 targetVelocity = new Vector2(moveX * currentSpeed, moveY * currentSpeed);//for no y movement: m_Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
-			// If the input is moving the player right and the player is facing left...
-			if (moveX > 0 && !m_FacingRight)
+			switch (moveX)
 			{
+				// If the input is moving the player right and the player is facing left...
+				case > 0 when !m_FacingRight:
+				// Otherwise if the input is moving the player left and the player is facing right...
 				// ... flip the player.
-				Flip();
-			}
-			// Otherwise if the input is moving the player left and the player is facing right...
-			else if (moveX < 0 && m_FacingRight)
-			{
-				// ... flip the player.
-				Flip();
+				case < 0 when m_FacingRight:
+					// ... flip the player.
+					Flip();
+					break;
 			}
 		}
 		// If the player should jump...
-		if (m_Grounded && jump)
-		{
-			// Add a vertical force to the player.
-			m_Grounded = false;
-			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-		}
+		if (!m_Grounded || !jump) return;
+		// Add a vertical force to the player.
+		m_Grounded = false;
+		m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 	}
 
 
