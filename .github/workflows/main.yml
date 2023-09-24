@@ -6,14 +6,34 @@ env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
 jobs:
+  checkLicense: 
+    name: Check Unity license
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail - No license 
+        if: env.UNITY_LICENSE == ''
+        run: |
+          echo "No Unity license found. Please add your Unity license to the repository secrets."
+          exit 1
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check Unity license
+        uses: game-ci/unity-check-license@v1
+        with:
+          unityVersion: 2022.3.9f1
+          unityChannels: beta,unity,package-manager
+
   testRunner:
+    needs: checkLicense
     name: Test in ${{ matrix.testMode }} ✨
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         testMode:
-          - EditMode
+          - EditModes
           - PlayMode
     steps:
       - name: Checkout code
