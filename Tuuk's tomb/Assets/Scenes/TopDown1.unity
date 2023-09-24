@@ -311,7 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 77780892}
   animator: {fileID: 200492731}
-  runSpeed: 30
+  runSpeed: 20
 --- !u!1 &115716082
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 423361947}
   - component: {fileID: 423361946}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2406,7 +2406,7 @@ GameObject:
   - component: {fileID: 616315195}
   - component: {fileID: 616315194}
   m_Layer: 0
-  m_Name: Objects
+  m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
