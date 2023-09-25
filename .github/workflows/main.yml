@@ -35,7 +35,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - Tuuk's tomb
+          - Tuuk\'s\ tomb
         testMode:
           - PlayMode
     steps:
@@ -46,9 +46,8 @@ jobs:
         run: |
           pwd
           ls -la
-          cd ${{ matrix.projectPath }}
-          pwd
-          ls -la
+          echo ${{ matrix.projectPath }}
+          
 
 
       - name: Create LFS file list
