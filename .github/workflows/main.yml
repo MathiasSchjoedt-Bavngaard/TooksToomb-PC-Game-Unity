@@ -70,7 +70,7 @@ jobs:
         uses: game-ci/unity-test-runner@v2
         id: testRunner
         with:
-          projectPath: ./Tuuk's tomb
+          projectPath: Tuuk's tomb
           testMode: ${{ matrix.testMode }}
           checkName: ${{ matrix.testMode }} test results
           githubToken: ${{ secrets.GITHUB_TOKEN }}
@@ -118,7 +118,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: WebGL
-          projectPath: ./Tuuk's tomb
+          projectPath: Tuuk's tomb
 
       - uses: actions/upload-artifact@v2
         with:
@@ -163,7 +163,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: StandaloneWindows64
-          projectPath: ./Tuuk's tomb
+          projectPath: Tuuk's tomb
 
       - uses: actions/upload-artifact@v2
         with:
@@ -208,7 +208,8 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: Android
-          projectPath: ./Tuuk's tomb
+          projectPath: Tuuk's tomb
+          
 
       - uses: actions/upload-artifact@v2
         with:
