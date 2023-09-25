@@ -7,9 +7,20 @@ env:
 
 jobs:
   checkLicense: 
-    name: Check Unity license
+    name: Check Unity license and path
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: TestWorkingDirectory
+        run: |
+          pwd
+          ls -la
+          cd "Tuuk's tomb"
+          pwd
+          ls -la
+
       - name: Fail - No license 
         if: env.UNITY_LICENSE == ''
         run: |
@@ -29,6 +40,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Change working directory
+        run: cd "Tuuk's tomb"
 
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
@@ -78,6 +92,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Change working directory
+        run: cd "Tuuk's tomb"
+
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
 
@@ -121,6 +138,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Change working directory
+        run: cd "Tuuk's tomb"
 
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
@@ -166,6 +186,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Change working directory
+        run: cd "Tuuk's tomb"
+
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
 
@@ -208,6 +231,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Change working directory
+        run: cd "Tuuk's tomb"
 
       - uses: actions/download-artifact@v2
         with:
