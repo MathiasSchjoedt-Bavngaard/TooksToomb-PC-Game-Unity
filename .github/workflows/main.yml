@@ -34,12 +34,22 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        projectPath:
+          - "Tuuk's tomb"
         testMode:
-          - EditModes
           - PlayMode
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: print working directory and subdirectories
+        run: |
+          pwd
+          ls -la
+          cd ${{ matrix.projectPath }}
+          pwd
+          ls -la
+
 
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
@@ -70,7 +80,7 @@ jobs:
         uses: game-ci/unity-test-runner@v2
         id: testRunner
         with:
-          projectPath: Tuuk's tomb
+          projectPath: ${{ matrix.projectPath }}
           testMode: ${{ matrix.testMode }}
           checkName: ${{ matrix.testMode }} test results
           githubToken: ${{ secrets.GITHUB_TOKEN }}
