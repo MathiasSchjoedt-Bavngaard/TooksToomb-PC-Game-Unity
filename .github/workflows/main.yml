@@ -1,4 +1,4 @@
-name: Build WebGL and post 🎮
+name: GameCI Template 🎮
 
 on: push
 permissions:
@@ -28,6 +28,7 @@ jobs:
         run: |
           echo "No Unity license found. Please add your Unity license to the repository secrets."
           exit 1
+
 
   # testRunner:
   #   needs: checkLicense
@@ -91,6 +92,7 @@ jobs:
   #         name: Test results (${{ matrix.testMode }})
   #         path: ${{ steps.testRunner.outputs.artifactsPath }}
 
+
   buildWebGL:
     name: Build for WebGL 🖥️
     runs-on: ubuntu-latest
@@ -134,6 +136,7 @@ jobs:
         with:
           name: build-WebGL
           path: build/WebGL
+
 
   # buildWindows:
   #   needs: testRunner
@@ -227,6 +230,7 @@ jobs:
   #         path: build/Android
 
 
+
   deployPages:
     needs: buildWebGL
     name: Deploy to Github Pages 🚀
@@ -254,3 +258,4 @@ jobs:
       - name: URL
         run:
           echo https://mathiasschjoedt-bavngaard.github.io/ComputerSpilUnity/
+
