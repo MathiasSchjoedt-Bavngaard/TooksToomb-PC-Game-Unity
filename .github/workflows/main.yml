@@ -41,9 +41,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Change working directory
-        run: cd "Tuuk's tomb"
-
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
 
@@ -69,18 +66,11 @@ jobs:
             Library-test-project-
             Library-
 
-      - name: Change working directory
-        run: cd "Tuuk's tomb"
-        
-      - name: PrintWorkingDirectory
-        run: |
-          pwd
-          ls -la
-        
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         id: testRunner
         with:
+          projectPath: ./Tuuk's tomb
           testMode: ${{ matrix.testMode }}
           checkName: ${{ matrix.testMode }} test results
           githubToken: ${{ secrets.GITHUB_TOKEN }}
@@ -100,9 +90,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Change working directory
-        run: cd "Tuuk's tomb"
-
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
 
@@ -119,11 +106,6 @@ jobs:
           git add .
           git reset --hard
 
-      - name: PrintWorkingDirectory
-        run: |
-          pwd
-          ls -la
-
       - name: Restore Library cache
         uses: actions/cache@v2
         with:
@@ -136,6 +118,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: WebGL
+          projectPath: ./Tuuk's tomb
 
       - uses: actions/upload-artifact@v2
         with:
@@ -152,9 +135,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Change working directory
-        run: cd "Tuuk's tomb"
-
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
 
@@ -170,11 +150,6 @@ jobs:
           git lfs pull
           git add .
           git reset --hard
-
-      - name: PrintWorkingDirectory
-        run: |
-          pwd
-          ls -la
         
       - name: Restore Library cache
         uses: actions/cache@v2
@@ -188,6 +163,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: StandaloneWindows64
+          projectPath: ./Tuuk's tomb
 
       - uses: actions/upload-artifact@v2
         with:
@@ -204,9 +180,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Change working directory
-        run: cd "Tuuk's tomb"
-
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
 
@@ -223,11 +196,6 @@ jobs:
           git add .
           git reset --hard
 
-      - name: PrintWorkingDirectory
-        run: |
-          pwd
-          ls -la
-
       - name: Restore Library cache
         uses: actions/cache@v2
         with:
@@ -240,6 +208,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: Android
+          projectPath: ./Tuuk's tomb
 
       - uses: actions/upload-artifact@v2
         with:
@@ -255,18 +224,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Change working directory
-        run: cd "Tuuk's tomb"
-
       - uses: actions/download-artifact@v2
         with:
           name: build-WebGL
           path: build
-
-      - name: PrintWorkingDirectory
-        run: |
-          pwd
-          ls -la
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
