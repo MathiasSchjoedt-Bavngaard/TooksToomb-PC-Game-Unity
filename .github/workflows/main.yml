@@ -1,6 +1,8 @@
 name: GameCI Template 🎮
 
 on: push
+permissions:
+  contents: write
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -229,8 +231,6 @@ jobs:
     needs: buildWebGL
     name: Deploy to Github Pages 🚀
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -243,6 +243,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: build/WebGL
