@@ -69,6 +69,9 @@ jobs:
             Library-test-project-
             Library-
 
+      - name: Change working directory
+        run: cd "Tuuk's tomb"
+        
       - name: PrintWorkingDirectory
         run: |
           pwd
@@ -224,7 +227,7 @@ jobs:
         run: |
           pwd
           ls -la
-          
+
       - name: Restore Library cache
         uses: actions/cache@v2
         with:
