@@ -69,6 +69,11 @@ jobs:
             Library-test-project-
             Library-
 
+      - name: PrintWorkingDirectory
+        run: |
+          pwd
+          ls -la
+        
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         id: testRunner
@@ -111,6 +116,11 @@ jobs:
           git add .
           git reset --hard
 
+      - name: PrintWorkingDirectory
+        run: |
+          pwd
+          ls -la
+
       - name: Restore Library cache
         uses: actions/cache@v2
         with:
@@ -119,7 +129,7 @@ jobs:
           restore-keys: |
             Library-build-
             Library-
-
+      
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: WebGL
@@ -158,6 +168,11 @@ jobs:
           git add .
           git reset --hard
 
+      - name: PrintWorkingDirectory
+        run: |
+          pwd
+          ls -la
+        
       - name: Restore Library cache
         uses: actions/cache@v2
         with:
@@ -205,6 +220,11 @@ jobs:
           git add .
           git reset --hard
 
+      - name: PrintWorkingDirectory
+        run: |
+          pwd
+          ls -la
+          
       - name: Restore Library cache
         uses: actions/cache@v2
         with:
@@ -239,6 +259,11 @@ jobs:
         with:
           name: build-WebGL
           path: build
+
+      - name: PrintWorkingDirectory
+        run: |
+          pwd
+          ls -la
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
