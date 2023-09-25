@@ -76,7 +76,7 @@ jobs:
             Library-
 
       - name: Run tests
-        uses: game-ci/unity-test-runner@v2
+        uses: game-ci/unity-test-runner@v3
         id: testRunner
         with:
           projectPath: ${{ matrix.projectPath }}
@@ -90,7 +90,6 @@ jobs:
           path: ${{ steps.testRunner.outputs.artifactsPath }}
 
   buildWebGL:
-    needs: testRunner
     name: Build for WebGL 🖥️
     runs-on: ubuntu-latest
     strategy:
@@ -124,7 +123,7 @@ jobs:
             Library-build-
             Library-
       
-      - uses: game-ci/unity-builder@v2
+      - uses: game-ci/unity-builder@v3
         with:
           targetPlatform: WebGL
           projectPath: TuuksTomb
@@ -169,7 +168,7 @@ jobs:
             Library-build-
             Library-
 
-      - uses: game-ci/unity-builder@v2
+      - uses: game-ci/unity-builder@v3
         with:
           targetPlatform: StandaloneWindows64
           projectPath: TuuksTomb
@@ -214,7 +213,7 @@ jobs:
             Library-build-
             Library-
 
-      - uses: game-ci/unity-builder@v2
+      - uses: game-ci/unity-builder@v3
         with:
           targetPlatform: Android
           projectPath: TuuksTomb
@@ -240,7 +239,7 @@ jobs:
           path: build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@4.4.3
         with:
           branch: gh-pages
           folder: build/WebGL
