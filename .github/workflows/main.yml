@@ -17,7 +17,7 @@ jobs:
         run: |
           pwd
           ls -la
-          cd "Tuuk's tomb"
+          cd "TuuksTomb"
           pwd
           ls -la
 
@@ -127,7 +127,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: WebGL
-          projectPath: Tuuk's tomb
+          projectPath: TuuksTomb
 
       - uses: actions/upload-artifact@v2
         with:
@@ -172,7 +172,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: StandaloneWindows64
-          projectPath: Tuuk's tomb
+          projectPath: TuuksTomb
 
       - uses: actions/upload-artifact@v2
         with:
@@ -217,7 +217,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: Android
-          projectPath: Tuuk's tomb
+          projectPath: TuuksTomb
           
 
       - uses: actions/upload-artifact@v2
