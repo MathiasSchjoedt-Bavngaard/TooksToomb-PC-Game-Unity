@@ -1,6 +1,10 @@
 name: GameCI Template 🎮
 
-on: push
+on: 
+  push:
+    branches: 
+      - main
+
 permissions:
   contents: write
 
@@ -94,6 +98,7 @@ jobs:
 
 
   buildWebGL:
+    needs: checkLicense
     name: Build for WebGL 🖥️
     runs-on: ubuntu-latest
     strategy:
