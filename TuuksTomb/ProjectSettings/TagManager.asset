@@ -41,14 +41,14 @@ TagManager:
   - name: Background
     uniqueID: 3046289783
     locked: 0
-  - name: Player
-    uniqueID: 3604052073
-    locked: 0
   - name: Dungeon
     uniqueID: 722344889
     locked: 0
   - name: Objects
     uniqueID: 669704033
+    locked: 0
+  - name: Player
+    uniqueID: 3604052073
     locked: 0
   - name: Default
     uniqueID: 0
