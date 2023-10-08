@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Eflatun.SceneReference;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    public string LevelName;
+    public SceneReference startLevel;
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(LevelName);
+        SceneManager.LoadScene(startLevel.Name);
     }
 }
