@@ -56,4 +56,11 @@ public class GameTimer : MonoBehaviour
         finished = false;
         running = true;
     }
+
+    public static void ResetTimer()
+    {
+        startTime = 0;
+        finished = false;
+        running = true;
+    }
 }
