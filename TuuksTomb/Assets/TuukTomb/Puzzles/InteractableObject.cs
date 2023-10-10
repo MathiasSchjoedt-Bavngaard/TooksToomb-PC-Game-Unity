@@ -33,18 +33,12 @@ public class InteractableObject : CollidableObject
         if (_interacted) return;
         _interacted = true;
     }
-
-    // Function to reset the game view after the dialog ends
-    public void ResetGameView()
-    {
-        StartCoroutine(FadeOut());
-    }
+    
     
     private void InteractWithDialog()
     {
         if (dialogueManager != null && !dialogueManager.isDialogInProgress)
         {
-            StartCoroutine(FadeIn());
             
             dialogueManager.isDialogInProgress = true; // Make dialog skip possible
             
@@ -54,33 +48,4 @@ public class InteractableObject : CollidableObject
             dialogueManager.StartDialogue(); // Start the dialog
         }
     }
-    
-    private IEnumerator FadeIn()
-    {
-        var startTime = Time.time;
-        float elapsedTime = 0;
-
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime = Time.time - startTime;
-            var alpha = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
-            fullScreenOverlay.color = new Color(fullScreenOverlay.color.r, fullScreenOverlay.color.g, fullScreenOverlay.color.b, alpha);
-            yield return null;
-        }
-    }
-
-    private IEnumerator FadeOut()
-    {
-        var startTime = Time.time;
-        float elapsedTime = 0;
-
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime = Time.time - startTime;
-            var alpha = Mathf.Lerp(1, 0, elapsedTime / fadeDuration);
-            fullScreenOverlay.color = new Color(fullScreenOverlay.color.r, fullScreenOverlay.color.g, fullScreenOverlay.color.b, alpha);
-            yield return null;
-        }
-    }
-    
 }

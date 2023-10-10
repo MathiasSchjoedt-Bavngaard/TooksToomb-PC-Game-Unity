@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -12,7 +13,25 @@ public class DialogueManager : MonoBehaviour
     private int _index;
     public bool isDialogInProgress;
     public bool dialogCompleted;
+    public bool fadeOutCompleted;
     
+    public Animator animator;
+
+    public void StartText()
+    {
+        
+        StartCoroutine(TypeLines());
+    }
+    private void FadeIn()
+    {
+        animator.SetTrigger("FadeInBlack");
+    }
+
+    private void FadeOut()
+    {
+        animator.SetTrigger("FadeOutBlack");
+    }
+
     private void Start()
     {
         textComponent.text = string.Empty;
@@ -38,7 +57,7 @@ public class DialogueManager : MonoBehaviour
     {
         _index = 0;
         textComponent.text = string.Empty;
-        StartCoroutine(TypeLines());
+        FadeOut();
     }
 
     private IEnumerator TypeLines()
@@ -61,8 +80,10 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            FadeIn();
             dialogCompleted = true;
             gameObject.SetActive(false);
         }
     }
+    
 }
