@@ -97,3 +97,7 @@ $RECYCLE.BIN/
 *.lnk
 
 Tuuk's tomb/Library/EditorInstance.json
+
+# Eflatun.SceneReference auto-generated map files
+**/[Aa]ssets/Resources/Eflatun/SceneReference/*.generated.json
+**/[Aa]ssets/Resources/Eflatun/SceneReference/*.generated.json.meta

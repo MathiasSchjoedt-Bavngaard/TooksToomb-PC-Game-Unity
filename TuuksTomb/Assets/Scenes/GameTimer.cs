@@ -38,6 +38,7 @@ public class GameTimer : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Player")) return;
         StopTimer();
+        PlayerPrefs.DeleteAll();
         UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
     }
     
@@ -51,7 +52,14 @@ public class GameTimer : MonoBehaviour
     public void RestartGame()
     {
         PlayerPrefs.DeleteAll();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("TopDown1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("TopDown1"); //this should be more dynamic to "start" scene
+        startTime = 0;
+        finished = false;
+        running = true;
+    }
+
+    public static void ResetTimer()
+    {
         startTime = 0;
         finished = false;
         running = true;

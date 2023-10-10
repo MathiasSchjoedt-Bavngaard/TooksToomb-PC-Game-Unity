@@ -1,38 +1,51 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using Eflatun.SceneReference;
 using UnityEngine.SceneManagement;
 public class ToggleScene : MonoBehaviour
 {
+    public SceneReference Topdown;
+    public List<SceneReference> Sideviews;
+    public float maxY;
+    public float minY;
+    
     public GameObject player;
     private void ToggleSceneFunction()
     {
         var playerPosition = player.transform.position;
         PlayerPrefs.SetFloat("x", playerPosition.x);
+        var currentScene = SceneManager.GetActiveScene();
+
+        var sceneTriggers = new float[Sideviews.Count];
+        var deltaY = maxY - minY;
         
-        if(SceneManager.GetActiveScene().name == "TopDown1")
+        for (int i = 0; i < Sideviews.Count; i++)
+        {
+            sceneTriggers[i] = maxY - ((deltaY / Sideviews.Count) * (i + 1));
+        }
+        
+        if( currentScene.name == Topdown.Name)
         {
             PlayerPrefs.SetFloat("z", playerPosition.y);
             
-            switch (playerPosition.y)
+            for (int i = 0; i < Sideviews.Count; i++)
             {
-                //in case player y is inbeween 10 and 0 go to scene 1.1 
-                case < 10 and > 0:
-                    SceneManager.LoadScene("Sideview1.1");
+                if (playerPosition.y > sceneTriggers[i])
+                {
+                    SceneManager.LoadScene(Sideviews[i].Name);
                     break;
-                
-                //in case player y is inbeween 0 and -10 go to scene 1.2
-                case > -10 and < 0:
-                    SceneManager.LoadScene("Sideview1.2");
-                    break;
+                }
             }
         }
+        
         else
         {
             PlayerPrefs.SetFloat("y", player.transform.position.y);
-            SceneManager.LoadScene("TopDown1");
+            SceneManager.LoadScene(Topdown.Name);
         }
     }
     
