@@ -4,7 +4,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
-    public VectorValue playerStartPosition;
     public bool sideView = false;
     
     
