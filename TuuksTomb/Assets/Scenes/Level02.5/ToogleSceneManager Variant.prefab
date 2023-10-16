@@ -60,22 +60,6 @@ PrefabInstance:
       propertyPath: Topdown.asset
       value: 
       objectReference: {fileID: 102900000, guid: 6a97b904860cbd3498b30bddfbb5aafe, type: 3}
-    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
-      propertyPath: Sideviews.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
-      propertyPath: Sideviews.Array.data[0].guid
-      value: 00000000000000000000000000000000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
-      propertyPath: Sideviews.Array.data[1].guid
-      value: e375ed35ca409bc4d8b0db60a8902ae3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
-      propertyPath: Sideviews.Array.data[1].asset
-      value: 
-      objectReference: {fileID: 102900000, guid: e375ed35ca409bc4d8b0db60a8902ae3, type: 3}
     - target: {fileID: 6514171954073977360, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: m_Name
       value: ToogleSceneManager Variant
