@@ -25,7 +25,7 @@ public class InteractableObject : CollidableObject
     protected override void WhenCollided(GameObject collidedObj)
     {
         if (!Input.GetKey(KeyCode.E)) return;
-        OnInteract();
+        //OnInteract();
         InteractWithDialog();
     }
     protected virtual void OnInteract()

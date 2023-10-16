@@ -12,14 +12,11 @@ public class DialogueManager : MonoBehaviour
 
     private int _index;
     public bool isDialogInProgress;
-    public bool dialogCompleted;
-    public bool fadeOutCompleted;
     
     public Animator animator;
 
     public void StartText()
     {
-        
         StartCoroutine(TypeLines());
     }
     private void FadeIn()
@@ -81,7 +78,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             FadeIn();
-            dialogCompleted = true;
+            isDialogInProgress = false;
             gameObject.SetActive(false);
         }
     }
