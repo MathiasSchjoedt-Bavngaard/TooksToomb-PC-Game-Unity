@@ -28,11 +28,7 @@ public class SideviewFader : MonoBehaviour
                 {
                     color.a = color.a - (colorScale * sideviewDif);
                 }
-                
-                color.r = color.r - (colorScale * sideviewDif);
-                color.g = color.g - (colorScale * sideviewDif);
-                color.b = color.b - (colorScale * sideviewDif);
-                gameObject.GetComponent<Tilemap>().color = color;
+                gameObject.GetComponent<Tilemap>().color = ScaledownColor(color, sideviewDif);
 
                 //set order in layer to 1 less pr difference in sideviewNumber
                 var order = gameObject.GetComponent<TilemapRenderer>().sortingOrder;
@@ -73,4 +69,19 @@ public class SideviewFader : MonoBehaviour
             }
         }
     }
+    
+    private Color ScaledownColor(Color color, float sideviewDif)
+    {
+        var procents = (colorScale * sideviewDif);
+        
+        //set color to colorScale% darker for each Difference in sideviewNumber
+        var redtoremove = color.r * procents;
+        color.r = color.r - redtoremove;
+        var greentoremove = color.g * procents;
+        color.g = color.g - greentoremove;
+        var bluetoremove = color.b * procents;
+        color.b = color.b - bluetoremove;
+        return color;
+    }
+    
 }

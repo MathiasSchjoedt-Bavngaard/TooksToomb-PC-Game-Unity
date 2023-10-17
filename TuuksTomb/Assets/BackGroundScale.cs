@@ -28,21 +28,28 @@ public class BackGroundScale : MonoBehaviour
         
         //make background darker for each difference in sideviewNumber
         var color = GetComponent<SpriteRenderer>().color;
-        color.r = color.r - (colorScale * sceneSideviewNumber);
-        color.g = color.g - (colorScale * sceneSideviewNumber);
-        color.b = color.b - (colorScale * sceneSideviewNumber);
-        GetComponent<SpriteRenderer>().color = color;
+  
+        GetComponent<SpriteRenderer>().color = ScaledownColor(color, sceneSideviewNumber);
         
         //make color of childrend darker for each difference in sideviewNumber
 foreach (Transform child in transform)
 {
     var childColor = child.GetComponent<SpriteRenderer>().color;
-    childColor.r = childColor.r - (colorScale * sceneSideviewNumber);
-    childColor.g = childColor.g - (colorScale * sceneSideviewNumber);
-    childColor.b = childColor.b - (colorScale * sceneSideviewNumber);
-    child.GetComponent<SpriteRenderer>().color = childColor;
+    child.GetComponent<SpriteRenderer>().color = ScaledownColor( childColor, sceneSideviewNumber);
 }
     }
-
+    private Color ScaledownColor(Color color, float sideviewDif)
+    {
+        var procents = (colorScale * sideviewDif);
+        
+        //set color to colorScale% darker for each Difference in sideviewNumber
+        var redtoremove = color.r * procents;
+        color.r = color.r - redtoremove;
+        var greentoremove = color.g * procents;
+        color.g = color.g - greentoremove;
+        var bluetoremove = color.b * procents;
+        color.b = color.b - bluetoremove;
+        return color;
+    }
     
 }
