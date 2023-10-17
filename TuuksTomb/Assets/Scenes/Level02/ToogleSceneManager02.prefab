@@ -49,6 +49,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: maxY
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: minY
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1677874876124270895, guid: 6548ed1dad5d38f4ca2b58b0e57d1a0d, type: 3}
@@ -62,23 +70,67 @@ PrefabInstance:
       objectReference: {fileID: 102900000, guid: 6a97b904860cbd3498b30bddfbb5aafe, type: 3}
     - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: Sideviews.Array.size
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: Sideviews.Array.data[0].guid
-      value: 00000000000000000000000000000000
+      value: b1b12de8396c78040ac99388d970693a
       objectReference: {fileID: 0}
     - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: Sideviews.Array.data[1].guid
       value: e375ed35ca409bc4d8b0db60a8902ae3
       objectReference: {fileID: 0}
     - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[2].guid
+      value: 0f1352e3304dd34468538a9c63b71272
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[3].guid
+      value: a20e612369be2aa4dbdf8901aaf57dce
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[4].guid
+      value: ae59993855d441042837802d0050a7e2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[5].guid
+      value: eff8e7d2da8ce8b40b9a3a53e271bd5b
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[6].guid
+      value: 862988cd205798a4e8f6f3cc0c90565c
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[0].asset
+      value: 
+      objectReference: {fileID: 102900000, guid: b1b12de8396c78040ac99388d970693a, type: 3}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: Sideviews.Array.data[1].asset
       value: 
       objectReference: {fileID: 102900000, guid: e375ed35ca409bc4d8b0db60a8902ae3, type: 3}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[2].asset
+      value: 
+      objectReference: {fileID: 102900000, guid: 0f1352e3304dd34468538a9c63b71272, type: 3}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[3].asset
+      value: 
+      objectReference: {fileID: 102900000, guid: a20e612369be2aa4dbdf8901aaf57dce, type: 3}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[4].asset
+      value: 
+      objectReference: {fileID: 102900000, guid: ae59993855d441042837802d0050a7e2, type: 3}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[5].asset
+      value: 
+      objectReference: {fileID: 102900000, guid: eff8e7d2da8ce8b40b9a3a53e271bd5b, type: 3}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[6].asset
+      value: 
+      objectReference: {fileID: 102900000, guid: 862988cd205798a4e8f6f3cc0c90565c, type: 3}
     - target: {fileID: 6514171954073977360, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: m_Name
-      value: ToogleSceneManager Variant
+      value: ToogleSceneManager02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
