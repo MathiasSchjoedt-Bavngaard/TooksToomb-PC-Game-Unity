@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToogleSceneManager02
       objectReference: {fileID: 0}
+    - target: {fileID: 6385280565359987490, guid: ba9537df044b3884a982e1fb26ca4e85, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2023280026}
     - target: {fileID: 7100894256306837004, guid: ba9537df044b3884a982e1fb26ca4e85, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1030,6 +1034,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6548ed1dad5d38f4ca2b58b0e57d1a0d, type: 3}
+--- !u!1 &2023280026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1677874876124270895, guid: 6548ed1dad5d38f4ca2b58b0e57d1a0d, type: 3}
+  m_PrefabInstance: {fileID: 2023280025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
