@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level03/TopDown3.unity
     guid: 4bdc56da897fa7444ac2bf54a293f51b
+  - enabled: 1
+    path: Assets/Scenes/Level03/Sideview3.1.unity
+    guid: 12dc38f26fafd3743baa90f8ba5f751e
   m_configObjects: {}

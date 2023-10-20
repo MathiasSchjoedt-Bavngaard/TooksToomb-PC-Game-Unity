@@ -59,10 +59,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b18331c6a3db447984a997bf160641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xScale: 0.05
+  yScale: 0.05
   ownSideviewNumber: 1
   sceneSideviewNumber: 1
   seetrhough: 0
-  ObjectsToTransform:
+  objectsToTransform:
   - {fileID: 2916622940456521047}
   - {fileID: 4660676388915696970}
 --- !u!1 &4660676388915696970
