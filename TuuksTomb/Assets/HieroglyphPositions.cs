@@ -45,7 +45,7 @@ public class HieroglyphPositions : MonoBehaviour
     }
 
     // Making hieroglyphs visible and setting their positions
-    private void SetHeirpglyphPositions()
+    private void SetHieroglyphsPositions()
     {
         if (sideView)
         {
@@ -96,6 +96,8 @@ public class HieroglyphPositions : MonoBehaviour
                     {
                         hieroglyph.GetComponent<BoxCollider2D>().enabled = false;
                     }
+                    
+                   
                 }
             }
         }
@@ -121,7 +123,7 @@ public class HieroglyphPositions : MonoBehaviour
 
     private void Start()
     {
-        SetHeirpglyphPositions();
+        SetHieroglyphsPositions();
     }
 
 
@@ -136,7 +138,7 @@ public class HieroglyphPositions : MonoBehaviour
         //TODO: remove input as only for testing
         //if x key pressed Set hieroglyph positions
         if (Input.GetKeyDown(KeyCode.B))
-            SetHeirpglyphPositions();
+            SetHieroglyphsPositions();
 
         if (Input.GetKeyDown(KeyCode.R))
             PlayerPrefs.DeleteAll();
