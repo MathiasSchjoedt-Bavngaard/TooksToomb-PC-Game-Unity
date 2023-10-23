@@ -3540,7 +3540,7 @@ MonoBehaviour:
   goToScene:
     asset: {fileID: 102900000, guid: 6a97b904860cbd3498b30bddfbb5aafe, type: 3}
     guid: 6a97b904860cbd3498b30bddfbb5aafe
-  initialPosition: {x: 0, y: 3}
+  initialPosition: {x: 0, y: 2}
   sideView: 0
 --- !u!61 &1568323880
 BoxCollider2D:

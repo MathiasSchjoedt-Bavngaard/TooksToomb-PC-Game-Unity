@@ -11,6 +11,7 @@ public class TjeckDoorOpen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
     var doorOpen = PlayerPrefs.GetInt("doorOpen");
     if (doorOpen == 1)
     {
