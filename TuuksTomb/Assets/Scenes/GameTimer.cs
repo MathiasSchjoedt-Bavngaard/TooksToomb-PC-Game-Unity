@@ -9,30 +9,30 @@ public class GameTimer : MonoBehaviour
 {
     // initialize timerText with Hurry Up! text
     public UnityEngine.UI.Text timerText;
-    
-    
+
+
     private static float startTime = 0;
     private static bool finished = false;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         TimeSpan time = TimeSpan.FromSeconds(startTime);
         timerText.text = time.ToString(@"mm\:ss\:ff");
     }
-    
+
     // Update is called once per frame counting text up from 0
     void Update()
     {
-        if (!finished )
+        if (!finished)
         {
             startTime += Time.deltaTime;
             TimeSpan time = TimeSpan.FromSeconds(startTime);
-            if(timerText != null && timerText.text != null)
-            timerText.text = time.ToString(@"mm\:ss\:ff");
+            if (timerText != null && timerText.text != null)
+                timerText.text = time.ToString(@"mm\:ss\:ff");
         }
     }
-    
+
     //on trigger stop timer and go to end Scene 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -41,13 +41,13 @@ public class GameTimer : MonoBehaviour
         PlayerPrefs.DeleteAll();
         UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
     }
-    
+
     //stop timer
     public void StopTimer()
     {
         finished = true;
     }
-    
+
     public void RestartGame()
     {
         PlayerPrefs.DeleteAll();
