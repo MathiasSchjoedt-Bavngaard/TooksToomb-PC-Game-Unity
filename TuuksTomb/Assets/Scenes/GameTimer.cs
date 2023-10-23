@@ -12,7 +12,6 @@ public class GameTimer : MonoBehaviour
     
     
     private static float startTime = 0;
-    private static bool running = false;
     private static bool finished = false;
     
     // Start is called before the first frame update
@@ -29,6 +28,7 @@ public class GameTimer : MonoBehaviour
         {
             startTime += Time.deltaTime;
             TimeSpan time = TimeSpan.FromSeconds(startTime);
+            if(timerText != null && timerText.text != null)
             timerText.text = time.ToString(@"mm\:ss\:ff");
         }
     }
@@ -46,7 +46,6 @@ public class GameTimer : MonoBehaviour
     public void StopTimer()
     {
         finished = true;
-        running = false;
     }
     
     public void RestartGame()
@@ -55,13 +54,11 @@ public class GameTimer : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("TopDown1"); //this should be more dynamic to "start" scene
         startTime = 0;
         finished = false;
-        running = true;
     }
 
     public static void ResetTimer()
     {
         startTime = 0;
         finished = false;
-        running = true;
     }
 }

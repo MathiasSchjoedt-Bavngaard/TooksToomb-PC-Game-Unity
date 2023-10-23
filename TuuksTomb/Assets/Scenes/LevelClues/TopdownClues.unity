@@ -171,6 +171,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: How Old are you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: 'are you my dad? '
+      objectReference: {fileID: 0}
     - target: {fileID: 6394261843385801971, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_Name
       value: Papyrus5
@@ -2949,6 +2961,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: Hello there
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: Theemo
+      objectReference: {fileID: 0}
     - target: {fileID: 6394261843385801971, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_Name
       value: Papyrus3
@@ -3041,7 +3065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6426488e87f41e4bbce0e23abbab2f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 0}
+  timerText: {fileID: 1161553357}
 --- !u!61 &658042511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3199,6 +3223,118 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6215781374043659135, guid: 0b77f9d6826891d42bc2581485f88bdc, type: 3}
   m_PrefabInstance: {fileID: 1401293226}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1161553356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 628018525204445377, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_Name
+      value: GameTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106932023785322099, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017408102866271918, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+--- !u!114 &1161553357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3971614650264339267, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+  m_PrefabInstance: {fileID: 1161553356}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1172225402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3514,6 +3650,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: Did you find the Swinx
+      objectReference: {fileID: 0}
     - target: {fileID: 6394261843385801971, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_Name
       value: Papyrus4
@@ -3570,6 +3710,18 @@ PrefabInstance:
     - target: {fileID: 30799532929213412, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: Im Took
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: Are you Garry
       objectReference: {fileID: 0}
     - target: {fileID: 6394261843385801971, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_Name
@@ -3665,3 +3817,4 @@ SceneRoots:
   - {fileID: 40265155}
   - {fileID: 658042512}
   - {fileID: 1568323881}
+  - {fileID: 1161553356}
