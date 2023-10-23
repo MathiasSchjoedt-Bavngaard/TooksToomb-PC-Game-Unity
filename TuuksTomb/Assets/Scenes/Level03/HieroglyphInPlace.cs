@@ -8,7 +8,7 @@ public class HieroglyphInPlace : MonoBehaviour
     public float[] xPositions;
     public float[] yPositions;
     public GameObject[] hieroglyphs;
-    public GameObject objectToMakeGlow;
+    public GameObject[] objectsToMakeGlow;
     
     
     private void setDoorOpenIfHeiroglyhsIsCorrect()
@@ -35,12 +35,19 @@ public class HieroglyphInPlace : MonoBehaviour
 
         if (correct)
         {
+            foreach (var obj in objectsToMakeGlow)
+            {
+                obj.SetActive(true);
+            }
             PlayerPrefs.SetInt("doorOpen", 1);
-            objectToMakeGlow.SetActive(true);
+          
         }
         else
         {
-            objectToMakeGlow.SetActive(false);
+            foreach (var obj in objectsToMakeGlow)
+            {
+                obj.SetActive(false);
+            }
         }
     }
     

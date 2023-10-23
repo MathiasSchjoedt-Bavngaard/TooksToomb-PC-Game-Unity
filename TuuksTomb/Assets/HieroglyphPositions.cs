@@ -87,6 +87,9 @@ public class HieroglyphPositions : MonoBehaviour
                     //make hieroglyph 10% darker for each unit it is further away than zPosition
                     hieroglyph.GetComponent<SpriteRenderer>().color =
                         ScaledownColor(hieroglyph.GetComponent<SpriteRenderer>().color, heiroglyphZ - zPosition);
+                    
+                    //set sorting layer to nagative negative heiroglyphZ - zPosition 
+                    hieroglyph.GetComponent<SpriteRenderer>().sortingOrder =  (int) (heiroglyphZ - zPosition) * -1;
 
                     //make hieroglyph not falling
                     hieroglyph.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -96,7 +99,10 @@ public class HieroglyphPositions : MonoBehaviour
                     {
                         hieroglyph.GetComponent<BoxCollider2D>().enabled = false;
                     }
-                    
+                    if (hieroglyph.GetComponent<CapsuleCollider2D>() != null)
+                    {
+                        hieroglyph.GetComponent<CapsuleCollider2D>().enabled = false;
+                    }
                    
                 }
             }
