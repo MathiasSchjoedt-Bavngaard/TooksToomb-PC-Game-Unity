@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158fd13ace9fe7945a09aa95d1292808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 200
+  m_JumpForce: 400
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -243,7 +243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 107224820179099790}
   animator: {fileID: 656216237552036885}
-  playerStartPosition: {fileID: 11400000, guid: 90027cfb49bfb9a44a0e80de318c3a41, type: 2}
   sideView: 1
   runSpeed: 20
 --- !u!1 &2636829414262597868
