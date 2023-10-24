@@ -50,4 +50,6 @@ MonoBehaviour:
   Sideviews: []
   maxY: 0
   minY: 0
+  clip: {fileID: 0}
+  audioSource: {fileID: 0}
   player: {fileID: 1797753984441286, guid: e0bd3015af80d894da39ba968ceb587e, type: 3}

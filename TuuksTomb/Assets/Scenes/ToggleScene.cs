@@ -12,7 +12,9 @@ public class ToggleScene : MonoBehaviour
     public List<SceneReference> Sideviews;
     public float maxY;
     public float minY;
-    
+    public AudioClip clip;
+    public AudioSource audioSource;
+
     public GameObject player;
     private void ToggleSceneFunction()
     {
