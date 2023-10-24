@@ -1,25 +1,31 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 public class CollidableObject : MonoBehaviour
 {
-    
-    private Collider2D _collider;
+    public Collider2D collider;
     [SerializeField]
     private ContactFilter2D filter;
     private List<Collider2D> _collidedObjects = new (1); //Only one player
     protected virtual void Start()
     {
-        _collider = GetComponent<Collider2D>();
+        if (!collider)
+        {
+            collider = GetComponent<Collider2D>();
+        }
     }
 
     protected virtual void Update()
     {
-        _collider.OverlapCollider(filter, _collidedObjects);
+        if (!collider)
+        {
+            return; // No collider assigned, so exit the method
+        }
+        
+        _collidedObjects.Clear(); // Clear the list at the start of the update
+        collider.OverlapCollider(filter, _collidedObjects);
+
         foreach (var o in _collidedObjects)
         {
             WhenCollided(o.GameObject());

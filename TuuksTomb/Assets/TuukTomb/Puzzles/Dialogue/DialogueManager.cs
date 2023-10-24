@@ -36,16 +36,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (isDialogInProgress && Input.GetMouseButtonDown(0))
+        if (isDialogInProgress && Input.GetKeyDown(KeyCode.Space))
         {
             if (textComponent.text == lines[_index])
             {
                 NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[_index];
             }
         }
     }

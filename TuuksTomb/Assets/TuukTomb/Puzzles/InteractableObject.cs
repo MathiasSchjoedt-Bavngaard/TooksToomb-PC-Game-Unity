@@ -9,9 +9,6 @@ public class InteractableObject : CollidableObject
     
     [CanBeNull] public DialogueManager dialogueManager; 
     
-    public RawImage fullScreenOverlay; // Reference to the RawImage covering the screen
-    public float fadeDuration = 3.0f; // Duration of the fading effect
-
     protected override void Start()
     {
         base.Start();
@@ -25,15 +22,8 @@ public class InteractableObject : CollidableObject
     protected override void WhenCollided(GameObject collidedObj)
     {
         if (!Input.GetKey(KeyCode.E)) return;
-        //OnInteract();
         InteractWithDialog();
     }
-    protected virtual void OnInteract()
-    {
-        if (_interacted) return;
-        _interacted = true;
-    }
-    
     
     private void InteractWithDialog()
     {
