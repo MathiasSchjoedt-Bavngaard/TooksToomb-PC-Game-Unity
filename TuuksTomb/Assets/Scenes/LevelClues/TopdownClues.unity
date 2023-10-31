@@ -171,6 +171,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: In the golden sands of Egypt, where myths are born and legends rise,
+        the tale of Pharaoh Tuukangamon stands unparalleled. Tuukangamon, the most
+        enigmatic of all pharaohs, ruled over a prosperous Egypt. His reign was marked
+        with peace, artistry, and grandeur. Yet, beneath this facade of serenity
+        lay secrets so dark that they would be whispered for millennia.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "On a fateful night, under a blood-red moon, Pharaoh Tuukangamon was
+        found dead in his chambers, a golden mask covering his lifeless face. The
+        sacred Horus medallion, said to protect the Pharaoh from any harm, was missing.
+        The Kingdom was thrown into chaos. Theories abounded \u2013 was it a political
+        rival? A scorned lover? Or was it the curse of the gods?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: "The High Priests, in their wisdom, sealed the Pharaoh in his grand
+        tomb, Tuuk\u2019s Tomb, hoping to keep the dark secrets and malevolent energies
+        contained. But they did one more thing: they placed a curse on the tomb.
+        Any soul daring to venture within would be trapped, unable to leave until
+        they unveiled the truth behind the Pharaoh's untimely demise."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: "Enter Aleron, a young explorer with a penchant for unraveling mysteries.
+        Armed with tales of riches, knowledge, and the allure of a challenge, Aleron
+        set forth to Egypt. He had heard whispers among the locals about the cursed
+        tomb and the secret it guarded. Undeterred by the warnings, he found himself
+        standing before the grand entrance of Tuuk\u2019s Tomb."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: "But, as the ancient prophecies foretold, as soon as Aleron entered,
+        the colossal stone door slammed shut behind him. A chilling voice echoed,
+        \u201CUnveil the truth, or remain trapped for eternity.\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: "Now, Aleron must navigate through a labyrinth of traps, riddles, and
+        ancient spirits, piecing together clues and reliving the final days of Pharaoh
+        Tuukangamon. With each chamber, the story unfolds, revealing betrayal, love,
+        ambition, and magic. Will Aleron uncover the truth and free himself, or will
+        he become another victim of Tuuk\u2019s Tomb?"
+      objectReference: {fileID: 0}
     - target: {fileID: 6394261843385801971, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_Name
       value: Papyrus3
@@ -227,6 +277,18 @@ PrefabInstance:
     - target: {fileID: 30799532929213412, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: Im line one in papyrus 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: Im line Two
       objectReference: {fileID: 0}
     - target: {fileID: 6394261843385801971, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_Name
@@ -3150,6 +3212,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: 'Py 2 '
+      objectReference: {fileID: 0}
     - target: {fileID: 6394261843385801971, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_Name
       value: Papyrus2
@@ -3206,6 +3272,38 @@ PrefabInstance:
     - target: {fileID: 30799532929213412, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "In the heart of ancient Egypt, shrouded in the sands of time, lies
+        the forgotten tale of Pharaoh Tuukangamon, a ruler shrouded in mystery. His
+        reign was a fleeting shadow, disappearing as quickly as it appeared in the
+        annals of history. Yet, within that shadow lurked secrets so profound, they
+        have become the stuff of legend.  The story begins on a night when the stars
+        refused to shine, and a chilling wind swept across the Nile. Pharaoh Tuukangamon,
+        revered and feared in equal measure, met his end under circumstances so bizarre,
+        they defied explanation. He was found lifeless, his body adorned with strange
+        symbols, in the innermost sanctum of his palace. The cause of death was unknown,
+        the motives unclear, and the perpetrator, a phantom in the night.  Whispers
+        of dark magic, power struggles, and divine wrath filled the air. In an attempt
+        to contain the growing unrest and the unexplained phenomena surrounding the
+        Pharaoh's death, the High Priests decided to entomb him in a structure so
+        secure and enigmatic that it was deemed an architectural wonder - Tuuk\u2019s
+        Tomb.  Generations passed, and the story of Tuukangamon faded into obscurity,
+        until a young and ambitious explorer named Aleron stumbled upon ancient texts
+        that spoke of the cursed tomb and the mysteries it held. Driven by a desire
+        for fame and a thirst for knowledge, Aleron set forth on a perilous journey
+        to the heart of the desert.  As Aleron stepped into the tomb, the heavy stone
+        door sealed shut, and a voice, ancient and eerie, echoed through the chambers:
+        \u201CSolve the riddle of the Pharaoh\u2019s demise, or be forever entwined
+        with his fate.\u201D  Now, Aleron finds himself trapped in a maze of secrets
+        and shadows. He must navigate through a series of cryptic puzzles, dodge
+        deadly traps, and confront the spectral guardians of the tomb. Each chamber
+        reveals a fragment of the past, piecing together the story of Tuukangamon\u2019s
+        enigmatic life and death.  Will Aleron unravel the mysteries that have confounded
+        scholars for centuries, or will he become yet another lost soul, forever
+        wandering the corridors of Tuuk\u2019s Tomb? The sands of time are running
+        low, and the truth awaits."
       objectReference: {fileID: 0}
     - target: {fileID: 6394261843385801971, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_Name
@@ -3700,6 +3798,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1593582828284702921, guid: 1d01979a2a10776449d1fa775f149f79, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: Secret Object
+      objectReference: {fileID: 0}
     - target: {fileID: 2095814702731963960, guid: 1d01979a2a10776449d1fa775f149f79, type: 3}
       propertyPath: m_Sprite
       value: 
