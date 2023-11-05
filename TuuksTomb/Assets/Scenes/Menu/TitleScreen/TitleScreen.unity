@@ -1176,8 +1176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startLevel:
-    asset: {fileID: 102900000, guid: 89fc708aa617e6f4cab6c48edd985fb6, type: 3}
-    guid: 89fc708aa617e6f4cab6c48edd985fb6
+    asset: {fileID: 102900000, guid: af18b0d4bf3480c4da0c4cd6f2230eb9, type: 3}
+    guid: af18b0d4bf3480c4da0c4cd6f2230eb9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
