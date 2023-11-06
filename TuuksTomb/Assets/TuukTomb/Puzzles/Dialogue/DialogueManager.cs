@@ -14,7 +14,8 @@ public class DialogueManager : MonoBehaviour
     public bool isDialogInProgress;
     
     public Animator animator;
-
+    private GameObject _player;
+    
     public void StartText()
     {
         StartCoroutine(TypeLines());
@@ -45,8 +46,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue()
+    public void StartDialogue(GameObject collidedObj)
     {
+        _player = collidedObj;
         _index = 0;
         textComponent.text = string.Empty;
         FadeOut();
@@ -72,6 +74,8 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            _player.GetComponent<PlayerMovement>().enabled = true;
+            _player.transform.GetChild(2).gameObject.GetComponent<Animator>().enabled = true;
             FadeIn();
             isDialogInProgress = false;
             gameObject.SetActive(false);

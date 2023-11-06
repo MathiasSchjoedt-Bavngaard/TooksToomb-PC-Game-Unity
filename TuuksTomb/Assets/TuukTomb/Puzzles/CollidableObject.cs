@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollidableObject : MonoBehaviour
 {
-    public Collider2D collider;
+    public new Collider2D collider;
     [SerializeField]
     private ContactFilter2D filter;
     private List<Collider2D> _collidedObjects = new (1); //Only one player
