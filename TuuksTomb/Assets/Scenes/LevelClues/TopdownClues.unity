@@ -173,15 +173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: lines.Array.size
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: lines.Array.data[0]
-      value: In the golden sands of Egypt, where myths are born and legends rise,
-        the tale of Pharaoh Tuukangamon stands unparalleled. Tuukangamon, the most
-        enigmatic of all pharaohs, ruled over a prosperous Egypt. His reign was marked
-        with peace, artistry, and grandeur. Yet, beneath this facade of serenity
-        lay secrets so dark that they would be whispered for millennia.
+      value: py 3
       objectReference: {fileID: 0}
     - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: lines.Array.data[1]
@@ -280,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: lines.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: lines.Array.data[0]
@@ -3275,35 +3271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313777590731845215, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: lines.Array.data[0]
-      value: "In the heart of ancient Egypt, shrouded in the sands of time, lies
-        the forgotten tale of Pharaoh Tuukangamon, a ruler shrouded in mystery. His
-        reign was a fleeting shadow, disappearing as quickly as it appeared in the
-        annals of history. Yet, within that shadow lurked secrets so profound, they
-        have become the stuff of legend.  The story begins on a night when the stars
-        refused to shine, and a chilling wind swept across the Nile. Pharaoh Tuukangamon,
-        revered and feared in equal measure, met his end under circumstances so bizarre,
-        they defied explanation. He was found lifeless, his body adorned with strange
-        symbols, in the innermost sanctum of his palace. The cause of death was unknown,
-        the motives unclear, and the perpetrator, a phantom in the night.  Whispers
-        of dark magic, power struggles, and divine wrath filled the air. In an attempt
-        to contain the growing unrest and the unexplained phenomena surrounding the
-        Pharaoh's death, the High Priests decided to entomb him in a structure so
-        secure and enigmatic that it was deemed an architectural wonder - Tuuk\u2019s
-        Tomb.  Generations passed, and the story of Tuukangamon faded into obscurity,
-        until a young and ambitious explorer named Aleron stumbled upon ancient texts
-        that spoke of the cursed tomb and the mysteries it held. Driven by a desire
-        for fame and a thirst for knowledge, Aleron set forth on a perilous journey
-        to the heart of the desert.  As Aleron stepped into the tomb, the heavy stone
-        door sealed shut, and a voice, ancient and eerie, echoed through the chambers:
-        \u201CSolve the riddle of the Pharaoh\u2019s demise, or be forever entwined
-        with his fate.\u201D  Now, Aleron finds himself trapped in a maze of secrets
-        and shadows. He must navigate through a series of cryptic puzzles, dodge
-        deadly traps, and confront the spectral guardians of the tomb. Each chamber
-        reveals a fragment of the past, piecing together the story of Tuukangamon\u2019s
-        enigmatic life and death.  Will Aleron unravel the mysteries that have confounded
-        scholars for centuries, or will he become yet another lost soul, forever
-        wandering the corridors of Tuuk\u2019s Tomb? The sands of time are running
-        low, and the truth awaits."
+      value: py  4
       objectReference: {fileID: 0}
     - target: {fileID: 6394261843385801971, guid: b91c8f3a327eb314e9b7fd7cfabddc43, type: 3}
       propertyPath: m_Name
@@ -3887,3 +3855,4 @@ SceneRoots:
   - {fileID: 730232572}
   - {fileID: 119039038}
   - {fileID: 782739940}
+  - {fileID: 1957921398}
