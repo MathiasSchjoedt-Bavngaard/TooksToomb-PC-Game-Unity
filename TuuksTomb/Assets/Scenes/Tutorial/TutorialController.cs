@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class TutorialController : MonoBehaviour
     public GameObject sidePlayer;
     public GameObject toggleSceneManager;
     public GameObject pauseMenu;
-    public GameObject dialog;
+    [CanBeNull] public DialogueManager dialogueManager;
     private List<RequiredControl> _requiredControls;
 
     private void Start()
@@ -29,6 +30,11 @@ public class TutorialController : MonoBehaviour
         foreach(var control in _requiredControls)
         {
             control.DisableComponents();
+        }
+
+        if (dialogueManager != null)
+        {
+            dialogueManager.gameObject.SetActive(false);
         }
 
         EnableCurrentRequiredControl();
@@ -57,6 +63,12 @@ public class TutorialController : MonoBehaviour
         var currentRequiredControl = _requiredControls[0];
         currentRequiredControl.EnableComponents();
         Debug.Log(currentRequiredControl.Message);
+        if (dialogueManager == null) return;
+
+        dialogueManager.StartDialogue(sidePlayer);
+        dialogueManager.gameObject.SetActive(true);
+        dialogueManager.lines = new string[] { currentRequiredControl.Message };
+        dialogueManager.StartText();
     }
 
     private class RequiredControl
