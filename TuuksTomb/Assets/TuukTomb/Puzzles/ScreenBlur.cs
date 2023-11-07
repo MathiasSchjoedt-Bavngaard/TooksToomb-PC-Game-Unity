@@ -8,6 +8,9 @@ public class ScreenBlur : MonoBehaviour
     
     public void OnFadeOutComplete()
     {
-        manager.StartText();
+        if (manager.gameObject.activeSelf)
+        {
+            manager.StartText();
+        }
     }
 }

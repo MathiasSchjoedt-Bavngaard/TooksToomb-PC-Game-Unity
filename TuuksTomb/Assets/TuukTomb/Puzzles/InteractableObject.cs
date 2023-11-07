@@ -9,9 +9,9 @@ public class InteractableObject : CollidableObject
     
     [CanBeNull] public DialogueManager dialogueManager; 
     
-    public RawImage fullScreenOverlay; // Reference to the RawImage covering the screen
-    public float fadeDuration = 3.0f; // Duration of the fading effect
-
+    private float lastInteractionTime;
+    private float interactionCooldown = 4.0f;
+    
     protected override void Start()
     {
         base.Start();
@@ -25,18 +25,18 @@ public class InteractableObject : CollidableObject
     protected override void WhenCollided(GameObject collidedObj)
     {
         if (!Input.GetKey(KeyCode.E)) return;
-        //OnInteract();
-        InteractWithDialog();
-    }
-    protected virtual void OnInteract()
-    {
-        if (_interacted) return;
-        _interacted = true;
+
+        if (!(Time.time - lastInteractionTime >= interactionCooldown)) return;
+        lastInteractionTime = Time.time;
+        InteractWithDialog(collidedObj);
     }
     
-    
-    private void InteractWithDialog()
+    private void InteractWithDialog(GameObject collidedObj)
     {
+        collidedObj.transform.GetChild(2).gameObject.GetComponent<Animator>().enabled = false;
+        collidedObj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        collidedObj.GetComponent<PlayerMovement>().enabled = false;
+        
         if (dialogueManager != null && !dialogueManager.isDialogInProgress)
         {
             
@@ -45,7 +45,7 @@ public class InteractableObject : CollidableObject
             //Problem probably here:
             dialogueManager.gameObject.SetActive(true); // Activate the dialog canvas
             
-            dialogueManager.StartDialogue(); // Start the dialog
+            dialogueManager.StartDialogue(collidedObj); // Start the dialog
         }
     }
 }
