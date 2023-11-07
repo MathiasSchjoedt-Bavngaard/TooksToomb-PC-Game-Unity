@@ -220,6 +220,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed6acbe00e44f9845974df60b239b053, type: 3}
+--- !u!1 &521194336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6273129156944289685, guid: 48af2d2098f84be4c9adbf8cc5235535, type: 3}
+  m_PrefabInstance: {fileID: 2050326705}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &573877806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,6 +685,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1915218915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1229838198496718682, guid: 065d51ccd21e5fd48ae34b45c07d076c, type: 3}
+  m_PrefabInstance: {fileID: 1373592873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1970987363
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sidePlayer: {fileID: 1223631469}
   topDownPlayer: {fileID: 0}
+  toggleSceneManager: {fileID: 521194336}
+  pauseMenu: {fileID: 1915218915}
 --- !u!4 &1970987365
 Transform:
   m_ObjectHideFlags: 0

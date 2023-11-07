@@ -1,18 +1,14 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.XR;
 
 
 public class TutorialController : MonoBehaviour
 {
     public GameObject sidePlayer;
-    public GameObject topDownPlayer;
     public GameObject toggleSceneManager;
     public GameObject pauseMenu;
+    public GameObject dialog;
     private List<RequiredControl> _requiredControls;
 
     private void Start()
@@ -24,23 +20,18 @@ public class TutorialController : MonoBehaviour
         var toggleSceneManagerScript = toggleSceneManager.GetComponent<ToggleScene>();
 
         var movement = new RequiredControl(new KeyCode[] { KeyCode.W, KeyCode.A, KeyCode.S, KeyCode.D}," to move!", characterControl, playerMovement);
-        var pauseMenuControl = new RequiredControl(new KeyCode[] {KeyCode.Escape }, " to toggle the pause menu!", pauseMenuScript);
         var shift = new RequiredControl(new KeyCode[] { KeyCode.LeftShift, KeyCode.RightShift }, " to sprint!");
+        var pauseMenuControl = new RequiredControl(new KeyCode[] {KeyCode.Escape }, " to toggle the pause menu!", pauseMenuScript);
         var toggleView = new RequiredControl(new KeyCode[] { KeyCode.Z}, " to toggle the character perspective between side-view and topdown!", toggleSceneManagerScript);
 
-        _requiredControls = new List<RequiredControl>() { movement, pauseMenuControl, shift, toggleView};
+        _requiredControls = new List<RequiredControl>() { movement, shift, pauseMenuControl, toggleView};
 
-        for (int i = _requiredControls.Count - 1; i >= 0; --i)
+        foreach(var control in _requiredControls)
         {
-            if (i == _requiredControls.Count - 1) continue;
-
-            var curControl = _requiredControls[i];
-            var earlierControl = _requiredControls[i + 1];
-            curControl.ComponentsToStayDisabled = earlierControl.GetDisabledComponents();
+            control.DisableComponents();
         }
 
-        _requiredControls[0].DisableComponents();
-        Debug.Log(_requiredControls[0].Message);
+        EnableCurrentRequiredControl();
     }
 
     void Update()
@@ -53,11 +44,19 @@ public class TutorialController : MonoBehaviour
             if (Input.GetKey(control))
             {
                 Debug.Log(control+" has been pressed");
-                currentRequiredControl.EnableComponents();
                 _requiredControls.RemoveAt(0);
-                Debug.Log(_requiredControls[0].Message);
+                EnableCurrentRequiredControl();
             }
         }
+    }
+
+    private void EnableCurrentRequiredControl()
+    {
+        if (_requiredControls.Count == 0) return;
+
+        var currentRequiredControl = _requiredControls[0];
+        currentRequiredControl.EnableComponents();
+        Debug.Log(currentRequiredControl.Message);
     }
 
     private class RequiredControl
@@ -71,16 +70,10 @@ public class TutorialController : MonoBehaviour
         public KeyCode[] Controls;
         public string Message;
         private List<MonoBehaviour> DisabledComponents = new List<MonoBehaviour>();
-        public List<MonoBehaviour> ComponentsToStayDisabled = new List<MonoBehaviour>();
-
-        public List<MonoBehaviour> GetDisabledComponents()
-        {
-            return DisabledComponents.Concat(ComponentsToStayDisabled).ToList();
-        }
 
         public void DisableComponents()
         {
-            foreach (var component in DisabledComponents.Concat(ComponentsToStayDisabled))
+            foreach (var component in DisabledComponents)
             {
                 component.enabled = false;
             }
