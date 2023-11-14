@@ -971,6 +971,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b77f9d6826891d42bc2581485f88bdc, type: 3}
+--- !u!1 &496433241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7472098870987616161, guid: d37e2315dfd717f4bb45ededd1deca5f, type: 3}
+  m_PrefabInstance: {fileID: 8021440098030927039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &802550807
 GameObject:
   m_ObjectHideFlags: 0
@@ -4596,14 +4601,20 @@ MonoBehaviour:
   - -2.25
   - -0.5
   - 1.25
+  - -0.5
+  - -0.5
   yPositions:
   - 2.5
   - 2.5
   - 2.5
+  - 0.5
+  - -1.5
   hieroglyphs:
   - {fileID: 3083379957720799994}
   - {fileID: 8089587028411659421}
   - {fileID: 3083379958431971461}
+  - {fileID: 496433241}
+  - {fileID: 1712937360}
   objectsToMakeGlow:
   - {fileID: 474629448}
   - {fileID: 102717283}
@@ -4657,6 +4668,11 @@ Transform:
   - {fileID: 949903455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1712937360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5882349249922871096, guid: d37e2315dfd717f4bb45ededd1deca5f, type: 3}
+  m_PrefabInstance: {fileID: 8021440098030927039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1719077702
 PrefabInstance:
   m_ObjectHideFlags: 0

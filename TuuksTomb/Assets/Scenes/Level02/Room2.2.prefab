@@ -1121,7 +1121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2556570888998141698, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_Tiles.Array.data[1].second.m_TileIndex
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2556570888998141698, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_Tiles.Array.data[2].second.m_TileIndex
@@ -1129,7 +1129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2556570888998141698, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_Tiles.Array.data[3].second.m_TileIndex
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2556570888998141698, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_Tiles.Array.data[4].second.m_TileIndex
@@ -1329,7 +1329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2556570888998141698, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_Tiles.Array.data[1].second.m_TileSpriteIndex
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2556570888998141698, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_Tiles.Array.data[2].second.m_TileSpriteIndex
@@ -1337,7 +1337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2556570888998141698, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_Tiles.Array.data[3].second.m_TileSpriteIndex
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2556570888998141698, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_Tiles.Array.data[4].second.m_TileSpriteIndex
@@ -1393,7 +1393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3414881242477251341, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 3414881242477251341, guid: 2da717275b2200045af73ee1fdfe564e, type: 3}
       propertyPath: m_LocalPosition.y
