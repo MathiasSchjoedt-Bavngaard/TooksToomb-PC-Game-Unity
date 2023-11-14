@@ -45,6 +45,10 @@ public class TutorialController : MonoBehaviour
         var currentRequiredControl = _requiredControls[0];
         if (currentRequiredControl == null) return;
 
+        // The dialogueManager listens to the space key to skip current write.
+        // We cannot do that, so we just wait for it to type all the lines.
+        if (dialogueManager.textComponent.text != currentRequiredControl.Message) return;
+
         foreach (var control in currentRequiredControl.Controls)
         {
             if (Input.GetKey(control))
