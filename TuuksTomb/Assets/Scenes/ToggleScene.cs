@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using Eflatun.SceneReference;
+using Unity.Mathematics;
 using UnityEngine.SceneManagement;
 public class ToggleScene : MonoBehaviour
 {
@@ -25,16 +26,18 @@ public class ToggleScene : MonoBehaviour
         
         for (int i = 0; i < Sideviews.Count; i++)
         {
-            sceneTriggers[i] = maxY - ((deltaY / Sideviews.Count) * (i + 1));
+            sceneTriggers[i] = maxY - ((deltaY / Sideviews.Count) * (i + 1)) ;
         }
         
         if( currentScene.name == Topdown.Name)
         {
-            PlayerPrefs.SetFloat("z", playerPosition.y);
+            float offset = (float)0.0;
+            float y = playerPosition.y - offset ;
+            PlayerPrefs.SetFloat("z", y);
             
             for (int i = 0; i < Sideviews.Count; i++)
             {
-                if (playerPosition.y > sceneTriggers[i])
+                if (y > sceneTriggers[i])
                 {
                     SceneManager.LoadScene(Sideviews[i].Name);
                     break;

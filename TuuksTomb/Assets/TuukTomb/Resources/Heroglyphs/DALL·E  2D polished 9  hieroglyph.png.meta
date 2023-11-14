@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 04dba6664723ce7499bd2ab6ecdae072
+guid: 9dbd1b77d4178b249ab775b43e448612
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,159 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dalle E many hioroglyohs _0
+      name: "DALL\xB7E  2D polished 9  hieroglyph_0"
       rect:
         serializedVersion: 2
-        x: 35
-        y: 695
-        width: 322
-        height: 311
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50aefd2525375584cb8d2a2b1dbaded7
-      internalID: 827840158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dalle E many hioroglyohs _1
-      rect:
-        serializedVersion: 2
-        x: 373
-        y: 700
-        width: 319
-        height: 304
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f36d845df8337d04ea64c31502dc36b2
-      internalID: -1398152422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dalle E many hioroglyohs _2
-      rect:
-        serializedVersion: 2
-        x: 721
-        y: 702
+        x: 45
+        y: 686
         width: 301
-        height: 301
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a18d55716a50714d9dfa70adb5776b9
-      internalID: -1089598358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dalle E many hioroglyohs _3
-      rect:
-        serializedVersion: 2
-        x: 715
-        y: 375
-        width: 309
-        height: 293
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 6, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56ce6ccf06275c64a87ad37eb8b1fc54
-      internalID: -1739862768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dalle E many hioroglyohs _4
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 375
-        width: 309
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4207db3914fe3384bb3890d987917e1e
-      internalID: -609256742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dalle E many hioroglyohs _5
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 373
-        width: 304
-        height: 297
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36d2d8a0b649ffe4cbb4922ba66d5286
-      internalID: -1231661782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dalle E many hioroglyohs _6
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 37
-        width: 304
-        height: 305
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e667c9f1e5a01e439ec2a3c7f87cf4d
-      internalID: -621801799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dalle E many hioroglyohs _7
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 39
-        width: 307
         height: 303
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -284,19 +137,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1eacde0d70c2c649aadea9e70142cdc
-      internalID: 540378864
+      spriteID: 22bea67a72953554daf3c56949f89904
+      internalID: 1627690320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dalle E many hioroglyohs _8
+      name: "DALL\xB7E  2D polished 9  hieroglyph_1"
       rect:
         serializedVersion: 2
-        x: 718
-        y: 35
-        width: 306
+        x: 362
+        y: 683
+        width: 313
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24414e71f057b0649b7ec9273d0dc1f4
+      internalID: 665783963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DALL\xB7E  2D polished 9  hieroglyph_2"
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 684
+        width: 305
         height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -305,8 +179,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec09810956a55154f87594ae793cb22c
-      internalID: -1436539377
+      spriteID: 5ccaf88059615d04087972c9b27bd97c
+      internalID: 1300379295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DALL\xB7E  2D polished 9  hieroglyph_3"
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 358
+        width: 302
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4420c2c68049c742bf7d8868286c5fa
+      internalID: -728717006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DALL\xB7E  2D polished 9  hieroglyph_4"
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 50
+        width: 298
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf4cf2d0d4350f45966975242bb88f1
+      internalID: -238288666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DALL\xB7E  2D polished 9  hieroglyph_5"
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 47
+        width: 311
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6887d387870e80d4aac04c8609b0e88c
+      internalID: -719912684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DALL\xB7E  2D polished 9  hieroglyph_6"
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 48
+        width: 302
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82307f50065154a448c5cc904a07c66c
+      internalID: 836867576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DALL\xB7E  2D polished 9  hieroglyph_7"
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 355
+        width: 302
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd281797937ca6540aacb75998ec26a2
+      internalID: 78812371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DALL\xB7E  2D polished 9  hieroglyph_8"
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 357
+        width: 314
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49bf18a051e1ec408ed873f7efaded9
+      internalID: -450590735
       vertices: []
       indices: 
       edges: []
@@ -322,15 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dalle E many hioroglyohs _0: 827840158
-      Dalle E many hioroglyohs _1: -1398152422
-      Dalle E many hioroglyohs _2: -1089598358
-      Dalle E many hioroglyohs _3: -1739862768
-      Dalle E many hioroglyohs _4: -609256742
-      Dalle E many hioroglyohs _5: -1231661782
-      Dalle E many hioroglyohs _6: -621801799
-      Dalle E many hioroglyohs _7: 540378864
-      Dalle E many hioroglyohs _8: -1436539377
+      "DALL\xB7E  2D polished 9  hieroglyph_0": 1627690320
+      "DALL\xB7E  2D polished 9  hieroglyph_1": 665783963
+      "DALL\xB7E  2D polished 9  hieroglyph_2": 1300379295
+      "DALL\xB7E  2D polished 9  hieroglyph_3": -728717006
+      "DALL\xB7E  2D polished 9  hieroglyph_4": -238288666
+      "DALL\xB7E  2D polished 9  hieroglyph_5": -719912684
+      "DALL\xB7E  2D polished 9  hieroglyph_6": 836867576
+      "DALL\xB7E  2D polished 9  hieroglyph_7": 78812371
+      "DALL\xB7E  2D polished 9  hieroglyph_8": -450590735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
