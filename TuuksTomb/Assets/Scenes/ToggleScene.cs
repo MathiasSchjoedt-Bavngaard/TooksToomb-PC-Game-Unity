@@ -15,12 +15,13 @@ public class ToggleScene : MonoBehaviour
     public float minY;
     
     public GameObject player;
+    // ReSharper disable Unity.PerformanceAnalysis
     private void ToggleSceneFunction()
     {
         var playerPosition = player.transform.position;
         PlayerPrefs.SetFloat("x", playerPosition.x);
         var currentScene = SceneManager.GetActiveScene();
-
+        
         var sceneTriggers = new float[Sideviews.Count];
         var deltaY = maxY - minY;
         
@@ -28,7 +29,7 @@ public class ToggleScene : MonoBehaviour
         {
             sceneTriggers[i] = maxY - ((deltaY / Sideviews.Count) * (i + 1)) ;
         }
-        
+       
         if( currentScene.name == Topdown.Name)
         {
             float offset = (float)0.0;
