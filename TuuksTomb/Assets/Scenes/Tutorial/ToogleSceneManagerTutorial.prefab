@@ -62,15 +62,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: Topdown.guid
-      value: 2cda990e2423bbf4892e6590ba056729
+      value: 89fc708aa617e6f4cab6c48edd985fb6
       objectReference: {fileID: 0}
     - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: Topdown.asset
       value: 
-      objectReference: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+      objectReference: {fileID: 102900000, guid: 89fc708aa617e6f4cab6c48edd985fb6, type: 3}
     - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: Sideviews.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: Sideviews.Array.data[0].guid
@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 102900000, guid: f0cd885df27ffe148b7f5f621c8d7f06, type: 3}
     - target: {fileID: 6514171954073977360, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
       propertyPath: m_Name
-      value: ToogleSceneManagerLevel01
+      value: ToogleSceneManagerTutorial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

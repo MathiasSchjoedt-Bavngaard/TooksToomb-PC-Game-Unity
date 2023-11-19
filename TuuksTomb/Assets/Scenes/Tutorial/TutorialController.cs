@@ -11,9 +11,12 @@ public class TutorialController : MonoBehaviour
     public GameObject pauseMenu;
     [CanBeNull] public DialogueManager dialogueManager;
     private List<RequiredControl> _requiredControls;
+    private static bool HasCompletedTutorial = false;
 
     private void Start()
     {
+        if (HasCompletedTutorial) return;
+
         var characterControl = sidePlayer.GetComponent<CharacterController2D>();
         var playerMovement = sidePlayer.GetComponent<PlayerMovement>();
 
@@ -42,8 +45,9 @@ public class TutorialController : MonoBehaviour
 
     void Update()
     {
+        if (_requiredControls==null || _requiredControls.Count == 0) return;
+
         var currentRequiredControl = _requiredControls[0];
-        if (currentRequiredControl == null) return;
 
         // The dialogueManager listens to the space key to skip current write.
         // We cannot do that, so we just wait for it to type all the lines.
@@ -56,22 +60,27 @@ public class TutorialController : MonoBehaviour
                 Debug.Log(control+" has been pressed");
                 _requiredControls.RemoveAt(0);
                 EnableCurrentRequiredControl();
+                break;
             }
         }
     }
 
     private void EnableCurrentRequiredControl()
     {
-        if (_requiredControls.Count == 0) return;
+        if (_requiredControls.Count == 0)
+        {
+            HasCompletedTutorial = true;
+            return;
+        }
 
         var currentRequiredControl = _requiredControls[0];
         currentRequiredControl.EnableComponents();
         Debug.Log(currentRequiredControl.Message);
         if (dialogueManager == null) return;
 
-        dialogueManager.StartDialogue(sidePlayer);
-        dialogueManager.gameObject.SetActive(true);
         dialogueManager.lines = new string[] { currentRequiredControl.Message };
+        dialogueManager.gameObject.SetActive(true);
+        dialogueManager.StartDialogue(sidePlayer);
         dialogueManager.StartText();
     }
 
