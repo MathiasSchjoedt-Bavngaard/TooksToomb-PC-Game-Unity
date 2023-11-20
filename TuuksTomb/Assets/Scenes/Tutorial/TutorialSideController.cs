@@ -9,9 +9,12 @@ public class TutorialSideController : TutorialControllerBase
     public GameObject sidePlayer;
     public GameObject toggleSceneManager;
     public GameObject pauseMenu;
+    private static bool _hasCompletedTutorial = false;
 
     protected override void Start()
     {
+        if (_hasCompletedTutorial) return;
+
         var characterControl = sidePlayer.GetComponent<CharacterController2D>();
         var playerMovement = sidePlayer.GetComponent<PlayerMovement>();
 
@@ -25,6 +28,12 @@ public class TutorialSideController : TutorialControllerBase
 
         _requiredControls = new List<RequiredControl>() { movement, shift, pauseMenuControl, toggleView};
         base.Start();
+    }
+
+    protected override void EndTutorial()
+    {
+        _hasCompletedTutorial = true;
+        base.EndTutorial();
     }
 
 }

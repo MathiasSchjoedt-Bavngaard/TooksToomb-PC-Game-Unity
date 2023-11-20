@@ -51,8 +51,7 @@ public abstract class TutorialControllerBase : MonoBehaviour
     {
         if (_requiredControls.Count == 0)
         {
-            dialogueManager.EndDialogue();
-            tutorialController.SetActive(false);
+            EndTutorial();
             return;
         }
 
@@ -65,6 +64,12 @@ public abstract class TutorialControllerBase : MonoBehaviour
         dialogueManager.gameObject.SetActive(true);
         dialogueManager.StartDialogue(null);
         dialogueManager.StartText();
+    }
+
+    protected virtual void EndTutorial()
+    {
+        dialogueManager.EndDialogue();
+        tutorialController.SetActive(false);
     }
 
     protected class RequiredControl
