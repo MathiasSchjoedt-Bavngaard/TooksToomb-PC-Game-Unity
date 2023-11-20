@@ -101,10 +101,13 @@ public class DialogueManager : MonoBehaviour
         EndDialogue();
     }
 
-    private void EndDialogue()
+    public void EndDialogue()
     {
-        _player.GetComponent<PlayerMovement>().enabled = true;
-        _player.transform.GetChild(2).gameObject.GetComponent<Animator>().enabled = true;
+        if (_player != null)
+        {
+            _player.GetComponent<PlayerMovement>().enabled = true;
+            _player.transform.GetChild(2).gameObject.GetComponent<Animator>().enabled = true;
+        }
         FadeIn();
         isDialogInProgress = false;
         gameObject.SetActive(false);

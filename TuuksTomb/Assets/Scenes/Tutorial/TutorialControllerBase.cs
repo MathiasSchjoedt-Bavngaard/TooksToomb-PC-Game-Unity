@@ -4,32 +4,14 @@ using System.Linq;
 using UnityEngine;
 
 
-public class TutorialController : MonoBehaviour
+public abstract class TutorialControllerBase : MonoBehaviour
 {
-    public GameObject sidePlayer;
-    public GameObject toggleSceneManager;
-    public GameObject pauseMenu;
+    public GameObject tutorialController;
     [CanBeNull] public DialogueManager dialogueManager;
-    private List<RequiredControl> _requiredControls;
-    private static bool HasCompletedTutorial = false;
+    protected List<RequiredControl> _requiredControls;
 
-    private void Start()
+    protected virtual void Start()
     {
-        if (HasCompletedTutorial) return;
-
-        var characterControl = sidePlayer.GetComponent<CharacterController2D>();
-        var playerMovement = sidePlayer.GetComponent<PlayerMovement>();
-
-        var pauseMenuScript = pauseMenu.GetComponent<PauseMenu>();
-        var toggleSceneManagerScript = toggleSceneManager.GetComponent<ToggleScene>();
-
-        var movement = new RequiredControl(new KeyCode[] { KeyCode.W, KeyCode.A, KeyCode.S, KeyCode.D}," to move!", characterControl, playerMovement);
-        var shift = new RequiredControl(new KeyCode[] { KeyCode.LeftShift, KeyCode.RightShift }, " to sprint!");
-        var pauseMenuControl = new RequiredControl(new KeyCode[] {KeyCode.Escape }, " to toggle the pause menu!", pauseMenuScript);
-        var toggleView = new RequiredControl(new KeyCode[] { KeyCode.Z}, " to toggle the character perspective between side-view and topdown!", toggleSceneManagerScript);
-
-        _requiredControls = new List<RequiredControl>() { movement, shift, pauseMenuControl, toggleView};
-
         foreach(var control in _requiredControls)
         {
             control.DisableComponents();
@@ -43,7 +25,7 @@ public class TutorialController : MonoBehaviour
         EnableCurrentRequiredControl();
     }
 
-    void Update()
+    private void Update()
     {
         if (_requiredControls==null || _requiredControls.Count == 0) return;
 
@@ -69,7 +51,8 @@ public class TutorialController : MonoBehaviour
     {
         if (_requiredControls.Count == 0)
         {
-            HasCompletedTutorial = true;
+            dialogueManager.EndDialogue();
+            tutorialController.SetActive(false);
             return;
         }
 
@@ -80,11 +63,11 @@ public class TutorialController : MonoBehaviour
 
         dialogueManager.lines = new string[] { currentRequiredControl.Message };
         dialogueManager.gameObject.SetActive(true);
-        dialogueManager.StartDialogue(sidePlayer);
+        dialogueManager.StartDialogue(null);
         dialogueManager.StartText();
     }
 
-    private class RequiredControl
+    protected class RequiredControl
     {
         public RequiredControl(KeyCode[] controls, string message, params MonoBehaviour[] disabledComponents) {
             Controls = controls;

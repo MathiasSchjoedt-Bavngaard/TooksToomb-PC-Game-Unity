@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7270170203353119167}
-  - component: {fileID: 2678695792689150598}
+  - component: {fileID: -1654609908260151724}
   m_Layer: 0
-  m_Name: TutorialControler
+  m_Name: TutorialTopDownController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2678695792689150598
+--- !u!114 &-1654609908260151724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,10 +41,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1880974852092259799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1414d37cd355d3b4d992a50433c17133, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a1051c448d123d49a7ae9471b34bbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sidePlayer: {fileID: 0}
   toggleSceneManager: {fileID: 0}
-  pauseMenu: {fileID: 0}
   dialogueManager: {fileID: 0}
