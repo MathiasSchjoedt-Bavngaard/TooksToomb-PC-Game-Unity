@@ -65,6 +65,10 @@ public class DialogueManager : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textWait);
         }
+        if (_index+1==lines.Length)
+        {
+            dialogueOptions?.DialogueEnd();
+        }
     }
 
     private void NextLine()
@@ -77,7 +81,7 @@ public class DialogueManager : MonoBehaviour
         }
         else if(dialogueOptions!=null)
         {
-
+            dialogueOptions.DialogueEnd();
         }
         else
         {
