@@ -15,6 +15,17 @@ public abstract class DialogueOptions : MonoBehaviour
         acceptButton.SetActive(true);
         declineButton.SetActive(true);
     }
-    public abstract void OnAccept();
-    public abstract void OnDecline();
+    private void SetButtonsInActive()
+    {
+        acceptButton.SetActive(false);
+        declineButton.SetActive(false);
+    }
+    public virtual void OnAccept()
+    {
+        SetButtonsInActive();
+    }
+    public virtual void OnDecline()
+    {
+        SetButtonsInActive();
+    }
 }

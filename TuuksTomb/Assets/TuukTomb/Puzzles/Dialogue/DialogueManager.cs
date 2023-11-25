@@ -91,14 +91,14 @@ public class DialogueManager : MonoBehaviour
 
     public void OnAccept()
     {
-        dialogueOptions.OnAccept();
         EndDialogue();
+        dialogueOptions.OnAccept();
     }
 
     public  void OnDecline()
     {
-        dialogueOptions.OnDecline();
         EndDialogue();
+        dialogueOptions.OnDecline();
     }
 
     public void EndDialogue()

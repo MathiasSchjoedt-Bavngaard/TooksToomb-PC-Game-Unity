@@ -10,6 +10,7 @@ public class TitleScreenControls : MonoBehaviour
 
     public void LoadLevel()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(startLevel.Name);
     }
 
