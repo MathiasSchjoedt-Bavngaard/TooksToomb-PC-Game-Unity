@@ -65,7 +65,7 @@ public class DialogueManager : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textWait);
         }
-        if (_index+1==lines.Length)
+        if (_index+1>=lines.Length)
         {
             dialogueOptions?.DialogueEnd();
         }
@@ -92,13 +92,13 @@ public class DialogueManager : MonoBehaviour
     public void OnAccept()
     {
         EndDialogue();
-        dialogueOptions.OnAccept();
+        dialogueOptions.Accept();
     }
 
     public  void OnDecline()
     {
         EndDialogue();
-        dialogueOptions.OnDecline();
+        dialogueOptions.Decline();
     }
 
     public void EndDialogue()

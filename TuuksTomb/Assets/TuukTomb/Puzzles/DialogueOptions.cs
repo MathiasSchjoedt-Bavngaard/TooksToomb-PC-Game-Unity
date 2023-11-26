@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class DialogueOptions : MonoBehaviour
@@ -10,6 +8,18 @@ public abstract class DialogueOptions : MonoBehaviour
     {
         Invoke(nameof(SetButtonsActive), 0.25f);
     }
+    public void Accept()
+    {
+        SetButtonsInActive();
+        OnAccept();
+    }
+    public void Decline()
+    {
+        SetButtonsInActive();
+        OnDecline();
+    }
+    protected abstract void OnAccept();
+    protected abstract void OnDecline();
     private void SetButtonsActive()
     {
         acceptButton.SetActive(true);
@@ -19,13 +29,5 @@ public abstract class DialogueOptions : MonoBehaviour
     {
         acceptButton.SetActive(false);
         declineButton.SetActive(false);
-    }
-    public virtual void OnAccept()
-    {
-        SetButtonsInActive();
-    }
-    public virtual void OnDecline()
-    {
-        SetButtonsInActive();
     }
 }

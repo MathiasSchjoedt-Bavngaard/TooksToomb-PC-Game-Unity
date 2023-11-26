@@ -2009,6 +2009,7 @@ MonoBehaviour:
   startLevel:
     asset: {fileID: 102900000, guid: af18b0d4bf3480c4da0c4cd6f2230eb9, type: 3}
     guid: af18b0d4bf3480c4da0c4cd6f2230eb9
+  playerPos: {x: 0, y: 0, z: 0}
 --- !u!114 &2045105805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4456,6 +4457,14 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 2097125916}
+    - target: {fileID: 7201523810140906299, guid: f47bc713f95c8d44cb28bd0e6123e305, type: 3}
+      propertyPath: playerPos.x
+      value: -7.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201523810140906299, guid: f47bc713f95c8d44cb28bd0e6123e305, type: 3}
+      propertyPath: playerPos.y
+      value: 2.61
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

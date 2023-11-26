@@ -9,6 +9,7 @@ public class LeverDialogue : DialogueOptions
     public Tilemap tilemap;
     public SceneReference startLevel;
     public GameObject lever;
+    public Vector3 playerPos;
 
     // Time it takes in seconds to shrink from starting scale to target scale.
     private float ShrinkDuration = 1.5f;
@@ -22,9 +23,8 @@ public class LeverDialogue : DialogueOptions
     // T is our interpolant for our linear interpolation.
     private float t = 0;
 
-    public override void OnAccept()
+    protected override void OnAccept()
     {
-        base.OnAccept();
         Debug.Log("Accept");
         var characterControl = player.GetComponent<CharacterController2D>();
         var playerMovement = player.GetComponent<PlayerMovement>();
@@ -53,9 +53,8 @@ public class LeverDialogue : DialogueOptions
         startScale = player.transform.localScale;
         Shrink();
     }
-    public override void OnDecline()
+    protected override void OnDecline()
     {
-        base.OnDecline();
         Debug.Log("Decline");
     }
 
@@ -70,7 +69,10 @@ public class LeverDialogue : DialogueOptions
 
         if (t > 1)
         {
-            PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetFloat("x", playerPos.x);
+            PlayerPrefs.SetFloat("z", playerPos.z);
+            PlayerPrefs.SetFloat("y", playerPos.y);
+
             SceneManager.LoadScene(startLevel.Name);
             return;
         }
