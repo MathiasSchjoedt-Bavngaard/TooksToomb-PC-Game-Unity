@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using JetBrains.Annotations;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -15,7 +16,9 @@ public class DialogueManager : MonoBehaviour
     
     public Animator animator;
     private GameObject _player;
-    
+
+    [CanBeNull] public DialogueOptions dialogueOptions;
+
     public void StartText()
     {
         StartCoroutine(TypeLines());
@@ -62,6 +65,10 @@ public class DialogueManager : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textWait);
         }
+        if (_index+1>=lines.Length)
+        {
+            dialogueOptions?.DialogueEnd();
+        }
     }
 
     private void NextLine()
@@ -72,14 +79,38 @@ public class DialogueManager : MonoBehaviour
             textComponent.text = string.Empty;
             StartCoroutine(TypeLines());
         }
+        else if(dialogueOptions!=null)
+        {
+            dialogueOptions.DialogueEnd();
+        }
         else
+        {
+            EndDialogue();
+        }
+    }
+
+    public void OnAccept()
+    {
+        EndDialogue();
+        dialogueOptions.Accept();
+    }
+
+    public  void OnDecline()
+    {
+        EndDialogue();
+        dialogueOptions.Decline();
+    }
+
+    public void EndDialogue()
+    {
+        if (_player != null)
         {
             _player.GetComponent<PlayerMovement>().enabled = true;
             _player.transform.GetChild(2).gameObject.GetComponent<Animator>().enabled = true;
-            FadeIn();
-            isDialogInProgress = false;
-            gameObject.SetActive(false);
         }
+        FadeIn();
+        isDialogInProgress = false;
+        gameObject.SetActive(false);
     }
     
 }
