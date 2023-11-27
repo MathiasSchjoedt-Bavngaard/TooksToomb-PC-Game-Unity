@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &966124768273833349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770422550564148572, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: maxY
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: minY
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Topdown.guid
+      value: 89fc708aa617e6f4cab6c48edd985fb6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Topdown.asset
+      value: 
+      objectReference: {fileID: 102900000, guid: 89fc708aa617e6f4cab6c48edd985fb6, type: 3}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[0].guid
+      value: f4703b3e3348ba74792ad514072cbacd
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[1].guid
+      value: f0cd885df27ffe148b7f5f621c8d7f06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[0].asset
+      value: 
+      objectReference: {fileID: 102900000, guid: f4703b3e3348ba74792ad514072cbacd, type: 3}
+    - target: {fileID: 2488149245044754546, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: Sideviews.Array.data[1].asset
+      value: 
+      objectReference: {fileID: 102900000, guid: f0cd885df27ffe148b7f5f621c8d7f06, type: 3}
+    - target: {fileID: 6514171954073977360, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}
+      propertyPath: m_Name
+      value: ToogleSceneManagerTutorial
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5221eb3357ecbed42963cd3f01732fe9, type: 3}

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float _verticalMove;
 
     private bool _jump = false;
+    private bool _crouching = false;
     private bool _isRunning = false;
     public float runSpeed = 20f;
 
@@ -52,15 +53,24 @@ public class PlayerMovement : MonoBehaviour
             runSpeed = 20f; // Set the default run speed when Shift is released
         }
 
-        if (_verticalMove > 0 && sideView)
+        switch (_verticalMove)
         {
-            _jump = true;
-            animator.SetBool("Jumping", true);
+            case > 0 when sideView:
+                _jump = true;
+                animator.SetBool("Jumping", true);
+                OnCrouching(_crouching);
+                break;
+            case < 0 when sideView:
+                _crouching = true;
+                OnCrouching(_crouching);
+                break;
+            default:
+                _jump = false;
+                _crouching = false;
+                OnCrouching(_crouching);
+                break;
         }
-        else
-        {
-            _jump = false;
-        }
+        
 
         var movement = new Vector2(_horizontalMove, _verticalMove);
         var combinedSpeed = movement.magnitude;
@@ -75,11 +85,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCrouching(bool isCrouching)
     {
+        animator.SetBool("Crouching", isCrouching);
+        if(_isRunning || isCrouching == false) 
+            animator.SetBool("Sliding", isCrouching);
     }
 
     private void FixedUpdate()
     {
-        controller.Move(_horizontalMove * Time.fixedDeltaTime, _verticalMove * Time.fixedDeltaTime, false, _jump,
+        controller.Move(_horizontalMove * Time.fixedDeltaTime, _verticalMove * Time.fixedDeltaTime, _crouching, _jump,
             _isRunning, sideView);
     }
 }

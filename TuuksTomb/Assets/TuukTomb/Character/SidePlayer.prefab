@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_GroundCheck: {fileID: 8770085148923085586}
   m_CeilingCheck: {fileID: 585187694163764953}
-  m_CrouchDisableCollider: {fileID: 0}
+  m_CrouchDisableCollider: {fileID: 4587319826365717880}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -120,7 +120,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!50 &4721132599214359434
 Rigidbody2D:
