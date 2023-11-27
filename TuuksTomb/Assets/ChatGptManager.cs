@@ -7,13 +7,15 @@ using TMPro;
 using UnityEngine.Events;
 public class ChatGptManager : MonoBehaviour
 {
-    private bool _wellDone; 
+    private ChatGptManager instance;
+    private bool hasrun;
+    public GameTimer GameTimer;
     public TextMeshProUGUI sphinxChat;
     public OnResponseEvent OnResponse;
     
     [Serializable]
     public class OnResponseEvent : UnityEvent<string> { }
-
+    
     private CreateChatCompletionRequest _request;
     private const string Key = "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";
     private readonly OpenAIApi _openAI = new (Key);
@@ -22,37 +24,20 @@ public class ChatGptManager : MonoBehaviour
     private float _lastRequestTime;
     private const float RequestCooldown = 2.0f;
 
-    private void Start()
+    private void Awake()
     {
+        if (instance != null) return;
+        instance = this;
+        DontDestroyOnLoad(instance);
+        if (hasrun) return;
         _messages.Clear();
         AddInitialPrompt();
     }
     
     private async void AddInitialPrompt()
     {
-        // const string initialPrompt =
-        //     "Act as a sphinx. The information you have to go off is that you introduce yourself as such: " +
-        //     "\"I am the Sphinx, the keeper of secrets and the judge of souls." +
-        //     "\nTo escape this timeless realm, you must heed the ancient decree." +
-        //     "\nOnly the pharaoh who has atoned for his sins can hope to find freedom beyond these walls." +
-        //     "\nIt is in the answer to my riddle that I will determine if you have truly found redemption." +
-        //     "\"\nYou know a riddle: \"\"I am born in the desert's fiery embrace," +
-        //     "\nYet I flow through the land at a gentle pace." +
-        //     "\nI'm revered by all, a giver of life,\nIn me, you can see secrets that cut like a knife." +
-        //     "\nMysteries of history, lost in the sands,\nHidden in my depths, in ancient lands." +
-        //     "\"\nWhat am I?" +
-        //     "\" And you will give options to this riddle: " +
-        //     "\"1. The Sphinx, sentinel of this ancient resting place" +
-        //     "\n2. The Ankh, a symbol of life and eternity in this tomb" +
-        //     "\n3. The River Nile, the sacred lifeline of Egypt's history" +
-        //     "\n4. The Sahara Desert, where the pharaoh's ambitions burned" +
-        //     "\" where the answer is the third one. If you are asked anything else you will find an answer that fits an ancient Egyptian sphinx. " +
-        //     "If the player selects a wrong answer you will insult their knowledge of ancient egypt but allow them to answer again with the wrong option removed. " +
-        //     "You will also limit the length of your messages to be no longer than 65 words and you will not help the player in any way unless they answer the riddle. " +
-        //     "They are not allowed to ask you for help to the riddle and you cannot provide them with any hints. " +
-        //     "When the player answers correctly you will use the words well done in your reply.";
-        //
-        const string initialPrompt = @"
+        hasrun = true;
+        const string initialPrompt = @" You will act as a sphinx. Abide the following information.
         Role: Sphinx, keeper of secrets and judge of souls
 
         Introduction: ""I am the Sphinx, the keeper of secrets and the judge of souls. To escape this realm, heed the ancient decree. Only a redeemed pharaoh can find freedom here. My riddle will reveal if you've found redemption.""
@@ -65,14 +50,14 @@ public class ChatGptManager : MonoBehaviour
         The Ankh, symbol of life and eternity.
         The River Nile, lifeline of Egypt's history.
         The Sahara Desert, land of pharaohs' dreams.
-        Correct Answer: Option 3, The River Nile.
+        Correct Answer: Option 3, The River Nile or The Nile or The Nile River.
 
         Instructions:
 
         If a wrong answer is chosen, respond with an insult about their knowledge of ancient Egypt, then allow another attempt with the wrong option removed.
         Limit responses to 65 words.
         Do not provide riddle hints or help unless the riddle is answered.
-        When the correct answer is given, respond with ""Well done.""
+        When the player says the nile or the river nile or the nile river, respond with ""Well done, the answer is indeed the river nile.""
         ";
         
         ChatMessage initialMessage = new()
@@ -110,11 +95,6 @@ public class ChatGptManager : MonoBehaviour
     
     private IEnumerator RevealSphinxText(string fullText)
     {
-        //If fullText contains well done then set _wellDone to true
-        if (fullText.Contains("well done") || fullText.Contains("Well done") || fullText.Contains("Well Done"))
-        {
-            _wellDone = true;
-        }
         const int charactersPerFrame = 1;
 
         for (var i = 0; i <= fullText.Length; i += charactersPerFrame)
@@ -125,8 +105,13 @@ public class ChatGptManager : MonoBehaviour
             yield return null; // Wait for one frame
         }
 
-        // Optionally, you can invoke the OnResponse event after the reveal is complete
         OnResponse.Invoke(fullText);
+        if (!fullText.Contains("Well done, the answer is indeed the river nile.") &&
+            !fullText.Contains("The answer is indeed the nile")) yield break;
+        //End game
+        GameTimer.StopTimer();
+        PlayerPrefs.DeleteAll();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
     }
 
     
@@ -179,6 +164,5 @@ public class ChatGptManager : MonoBehaviour
         {
             Debug.LogError(e);
         }
-        Debug.Log(_wellDone);
     }
 }

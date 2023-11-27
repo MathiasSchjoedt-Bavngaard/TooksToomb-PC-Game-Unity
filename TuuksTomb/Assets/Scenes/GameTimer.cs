@@ -51,7 +51,7 @@ public class GameTimer : MonoBehaviour
     public void RestartGame()
     {
         PlayerPrefs.DeleteAll();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("TopDown1"); //this should be more dynamic to "start" scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene("TitleScreen"); //this should be more dynamic to "start" scene
         startTime = 0;
         finished = false;
     }
