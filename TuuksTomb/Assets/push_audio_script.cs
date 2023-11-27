@@ -6,12 +6,12 @@ public class CollisionSoundFade : MonoBehaviour
     public AudioClip collisionClip;
     public float fadeOutTime = 1f; // The duration of the fade-out in seconds
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private Coroutine fadeOutCoroutine;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        
         if (!audioSource)
         {
             Debug.LogError("No AudioSource component found on this GameObject!");

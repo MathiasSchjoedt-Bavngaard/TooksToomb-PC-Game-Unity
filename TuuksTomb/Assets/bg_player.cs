@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class BgMusic : MonoBehaviour
 {
     public AudioClip bg_clip;
-    private AudioSource bg_music;
+    public AudioSource bg_music;
     private string currentSceneName;
 
     // Define a dictionary to map scene names to music tracks
@@ -20,7 +20,6 @@ public class BgMusic : MonoBehaviour
     private void Start()
     {
         // Get the AudioSource component attached to the same GameObject
-       bg_music = GetComponent<AudioSource>();
 
         // Set the audio clip to play
        bg_music.clip = bg_clip;

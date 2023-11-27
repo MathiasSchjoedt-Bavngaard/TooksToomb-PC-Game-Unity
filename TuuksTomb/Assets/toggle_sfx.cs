@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlaySoundOnKeyPress : MonoBehaviour
 {
     public AudioClip soundToPlay;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class PlaySoundOnKeyPress : MonoBehaviour
     private void Start()
     {
         // Get the AudioSource component attached to the same GameObject
-        audioSource = GetComponent<AudioSource>();
+       
 
         // Set the audio clip to play
         audioSource.clip = soundToPlay;
