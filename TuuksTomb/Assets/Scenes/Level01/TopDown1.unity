@@ -293,11 +293,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4869855888703467581, guid: 0b77f9d6826891d42bc2581485f88bdc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.28
+      value: -6.9
       objectReference: {fileID: 0}
     - target: {fileID: 4869855888703467581, guid: 0b77f9d6826891d42bc2581485f88bdc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.61
+      value: 2.55
       objectReference: {fileID: 0}
     - target: {fileID: 4869855888703467581, guid: 0b77f9d6826891d42bc2581485f88bdc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -449,7 +449,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 669704033
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -2037,7 +2037,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 722344889
-  m_SortingLayer: -2
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.5, y: 0.5, z: 0}
