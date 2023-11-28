@@ -78,6 +78,8 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelClues/TopdownClues.unity
     guid: 6537dcb6334336545a5714a58c132eab
   - enabled: 1
+    path: Assets/Scenes/LevelClues/Sphinx/sphinx.unity
+    guid: 5fa6c4cb9bfea6b42a867ebf2bc26d20
     path: Assets/Scenes/Tutorial/TutorialTopDown.unity
     guid: 89fc708aa617e6f4cab6c48edd985fb6
   - enabled: 1
