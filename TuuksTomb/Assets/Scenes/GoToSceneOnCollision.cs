@@ -13,6 +13,8 @@ public class GoToSceneOnCollision : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.gameObject.CompareTag("Player")) return;
+        PlayerPrefs.SetString("continueLevel", goToScene.Name);
+        
         PlayerPrefs.SetFloat("x", initialPosition.x);
         if (sideView)
             PlayerPrefs.SetFloat("y", initialPosition.y);

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HieroglyphInPlace : MonoBehaviour
@@ -11,7 +9,7 @@ public class HieroglyphInPlace : MonoBehaviour
     public GameObject[] objectsToMakeGlow;
     
     
-    private void setDoorOpenIfHeiroglyhsIsCorrect()
+    private void SetDoorOpenIfHieroglyhsIsCorrect()
     {
         var correct = true;
         
@@ -54,13 +52,13 @@ public class HieroglyphInPlace : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.gameObject.CompareTag("Player")) return;
-        setDoorOpenIfHeiroglyhsIsCorrect();
+        SetDoorOpenIfHieroglyhsIsCorrect();
     }
     
     void Start()
     {   
         //everySecond check if hieroglyphs are in correct position
-        InvokeRepeating(nameof(setDoorOpenIfHeiroglyhsIsCorrect), 0.0f, 1.0f);
+        InvokeRepeating(nameof(SetDoorOpenIfHieroglyhsIsCorrect), 0.0f, 1.0f);
         
     }
 }
