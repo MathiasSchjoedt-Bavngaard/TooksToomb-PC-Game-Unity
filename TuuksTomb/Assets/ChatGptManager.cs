@@ -71,7 +71,7 @@ public class ChatGptManager : MonoBehaviour
         _request = new CreateChatCompletionRequest
         {
             Messages = _messages,
-            Model = "gpt-4-1106-preview	"
+            Model = "gpt-4-1106-preview"
         };
         
         try { 
@@ -136,7 +136,7 @@ public class ChatGptManager : MonoBehaviour
         _request = new CreateChatCompletionRequest
         {
             Messages = _messages,
-            Model = "gpt-4-1106-preview	"
+            Model = "gpt-4-1106-preview"
         };
         
         try { 
