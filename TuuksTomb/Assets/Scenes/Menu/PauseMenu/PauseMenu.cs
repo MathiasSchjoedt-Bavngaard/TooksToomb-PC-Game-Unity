@@ -48,8 +48,6 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         GameIsPaused = false;
-        //GameTimer.ResetTimer();
-        //PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("TitleScreen");
     }
     
@@ -57,9 +55,12 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         GameIsPaused = false;
-        GameTimer.ResetTimer();
-        PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene("TitleScreen");
+        var continueLevel = PlayerPrefs.GetString("continueLevel");
+        PlayerPrefs.SetFloat("x", -7);
+        PlayerPrefs.SetFloat("z", 0);
+        PlayerPrefs.SetFloat("y", 3);
+
+        SceneManager.LoadScene(continueLevel);
     }
 
     public void QuitGame()
