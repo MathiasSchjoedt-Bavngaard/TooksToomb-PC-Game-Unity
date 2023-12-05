@@ -912,7 +912,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -438, y: -470.62}
+  m_AnchoredPosition: {x: -700, y: -475}
   m_SizeDelta: {x: 224.23, y: 46.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959167823
@@ -931,6 +931,7 @@ MonoBehaviour:
     asset: {fileID: 102900000, guid: af18b0d4bf3480c4da0c4cd6f2230eb9, type: 3}
     guid: af18b0d4bf3480c4da0c4cd6f2230eb9
   playerPos: {x: -6.5, y: -4, z: 0}
+  continueButton: {fileID: 959167821}
 --- !u!114 &959167824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1414,6 +1415,7 @@ MonoBehaviour:
     asset: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
     guid: 2cda990e2423bbf4892e6590ba056729
   playerPos: {x: 0, y: 0, z: 0}
+  continueButton: {fileID: 0}
 --- !u!114 &1650622956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1821,6 +1823,7 @@ MonoBehaviour:
     asset: {fileID: 102900000, guid: af18b0d4bf3480c4da0c4cd6f2230eb9, type: 3}
     guid: af18b0d4bf3480c4da0c4cd6f2230eb9
   playerPos: {x: -6.5, y: -4, z: 0}
+  continueButton: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

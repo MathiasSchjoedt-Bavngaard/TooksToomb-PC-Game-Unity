@@ -23,6 +23,7 @@ public class LeverDialogue : DialogueOptions
     // T is our interpolant for our linear interpolation.
     private float t = 0;
 
+
     protected override void OnAccept()
     {
         Debug.Log("Accept");
@@ -74,6 +75,7 @@ public class LeverDialogue : DialogueOptions
             PlayerPrefs.SetFloat("y", playerPos.y);
 
             SceneManager.LoadScene(startLevel.Name);
+            PlayerPrefs.SetString("continueLevel", startLevel.Name);
             return;
         }
         Invoke(nameof(Shrink), 1/60);
