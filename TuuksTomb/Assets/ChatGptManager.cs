@@ -71,7 +71,7 @@ public class ChatGptManager : MonoBehaviour
         _request = new CreateChatCompletionRequest
         {
             Messages = _messages,
-            Model = "gpt-4"
+            Model = "gpt-4-1106-preview"
         };
         
         try { 
@@ -106,8 +106,7 @@ public class ChatGptManager : MonoBehaviour
         }
 
         OnResponse.Invoke(fullText);
-        if (!fullText.Contains("Well done, the answer is indeed the river nile.") &&
-            !fullText.Contains("The answer is indeed the nile")) yield break;
+        if (!fullText.Contains("Well done,")) yield break;
         //End game
         GameTimer.StopTimer();
         PlayerPrefs.DeleteAll();
@@ -137,7 +136,7 @@ public class ChatGptManager : MonoBehaviour
         _request = new CreateChatCompletionRequest
         {
             Messages = _messages,
-            Model = "gpt-4"
+            Model = "gpt-4-1106-preview"
         };
         
         try { 

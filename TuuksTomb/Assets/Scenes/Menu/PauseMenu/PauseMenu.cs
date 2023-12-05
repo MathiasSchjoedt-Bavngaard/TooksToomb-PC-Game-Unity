@@ -48,9 +48,22 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         GameIsPaused = false;
-        GameTimer.ResetTimer();
-        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("TitleScreen");
+    }
+    
+    public void ResetMeny()
+    {
+        Time.timeScale = 1.0f;
+        GameIsPaused = false;
+ 
+        PlayerPrefs.SetFloat("x", -7);
+        PlayerPrefs.SetFloat("z", 0);
+        PlayerPrefs.SetFloat("y", 3);
+
+        var continueLevel = PlayerPrefs.GetString("continueLevel");
+        if (string.IsNullOrEmpty(continueLevel)) return;
+
+        SceneManager.LoadScene(continueLevel);
     }
 
     public void QuitGame()

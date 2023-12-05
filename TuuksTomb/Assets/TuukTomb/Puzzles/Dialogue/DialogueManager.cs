@@ -45,6 +45,10 @@ public class DialogueManager : MonoBehaviour
             if (textComponent.text == lines[_index])
             {
                 NextLine();
+                if (dialogueOptions != null)
+                {
+                    OnAccept();
+                }
             }
         }
     }
