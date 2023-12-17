@@ -7,49 +7,52 @@ public class CollisionSoundFade : MonoBehaviour
     public float fadeOutTime = 1f; // The duration of the fade-out in seconds
 
     public AudioSource audioSource;
-    private Coroutine fadeOutCoroutine;
+    private Coroutine _fadeOutCoroutine;
+    private float _startVolume;
 
     void Start()
     {
-        
-        if (!audioSource)
-        {
-            Debug.LogError("No AudioSource component found on this GameObject!");
-        }
+        _startVolume = audioSource.volume;
+        if (audioSource) return;
+        Debug.LogError("No AudioSource component found on this GameObject!");
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collidingObject)
     {
-        if (audioSource && collisionClip)
+        if (!collidingObject.gameObject.CompareTag("Player")) return;
+        if (!audioSource || !collisionClip) return;
+        if (_fadeOutCoroutine != null)
         {
-            audioSource.PlayOneShot(collisionClip);
+            StopCoroutine(_fadeOutCoroutine);
         }
+
+        audioSource.volume = _startVolume;
+
+        if (!audioSource.isPlaying)
+            audioSource.PlayOneShot(collisionClip);
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         // Start fading out the sound when the collision ends
-        if (audioSource.isPlaying)
+        if (!audioSource.isPlaying) return;
+        if (_fadeOutCoroutine != null)
         {
-            if (fadeOutCoroutine != null)
-            {
-                StopCoroutine(fadeOutCoroutine);
-            }
-            fadeOutCoroutine = StartCoroutine(FadeOut(audioSource, fadeOutTime));
+            StopCoroutine(_fadeOutCoroutine);
         }
+
+        _fadeOutCoroutine = StartCoroutine(FadeOut(audioSource, fadeOutTime));
     }
 
-    IEnumerator FadeOut(AudioSource audioSource, float fadeTime)
+    private IEnumerator FadeOut(AudioSource methodAudioSource, float fadeTime)
     {
-        float startVolume = audioSource.volume;
-
-        while (audioSource.volume > 0)
+        while (methodAudioSource.volume > 0)
         {
-            audioSource.volume -= startVolume * Time.deltaTime / fadeTime;
+            methodAudioSource.volume -= _startVolume * Time.deltaTime / fadeTime;
             yield return null;
         }
 
-        audioSource.Stop();
-        audioSource.volume = startVolume; // Reset volume to start value to not affect future playbacks
+        methodAudioSource.Stop();
+        methodAudioSource.volume = _startVolume; // Reset volume to start value to not affect future playbacks
     }
 }
