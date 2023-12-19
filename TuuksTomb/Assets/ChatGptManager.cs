@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using OpenAI;
 using TMPro;
-using UnityEditor.VersionControl;
 using UnityEngine.Events;
 public class ChatGptManager : MonoBehaviour
 {
@@ -144,7 +143,7 @@ public class ChatGptManager : MonoBehaviour
         _request = new CreateChatCompletionRequest
         {
             Messages = _messages,
-            Model = "gpt-3.5-turbo"
+            Model = "gpt-4"
         };
         
         try { 
